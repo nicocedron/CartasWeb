@@ -1,0 +1,420 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/bin/npm', 'install', '-g', 'stylus' ]
+info using npm@1.1.4
+info using node@v0.6.12
+verbose config file /home/fabian/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+verbose cache add [ 'stylus', null ]
+silly cache add: name, spec, args [ undefined, 'stylus', [ 'stylus', null ] ]
+verbose parsed url { pathname: 'stylus', path: 'stylus', href: 'stylus' }
+verbose addNamed [ 'stylus', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ 'stylus', '', false ]
+verbose raw, before any munging stylus
+verbose url resolving [ 'https://registry.npmjs.org/', './stylus' ]
+verbose url resolved https://registry.npmjs.org/stylus
+http GET https://registry.npmjs.org/stylus
+http 200 https://registry.npmjs.org/stylus
+silly get cb [ 200,
+silly get cb   { vary: 'Accept',
+silly get cb     server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+silly get cb     etag: '"43PMA2LU6F5TQOKG8C4ML8JPB"',
+silly get cb     date: 'Fri, 20 Dec 2013 02:57:00 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '309673' } ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/fabian/.npm'
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/fabian/.npm/stylus'
+verbose mkdir done: /home/fabian/.npm/stylus 755
+silly name, range, hasData 2 [ 'stylus', '', true ]
+silly versions [ 'stylus',
+silly versions   [ '0.0.1',
+silly versions     '0.0.2',
+silly versions     '0.1.0',
+silly versions     '0.2.0',
+silly versions     '0.2.1',
+silly versions     '0.3.0',
+silly versions     '0.3.1',
+silly versions     '0.4.0',
+silly versions     '0.4.1',
+silly versions     '0.5.0',
+silly versions     '0.5.1',
+silly versions     '0.5.2',
+silly versions     '0.5.3',
+silly versions     '0.6.0',
+silly versions     '0.6.2',
+silly versions     '0.6.3',
+silly versions     '0.6.4',
+silly versions     '0.6.5',
+silly versions     '0.6.6',
+silly versions     '0.6.7',
+silly versions     '0.7.0',
+silly versions     '0.7.1',
+silly versions     '0.7.2',
+silly versions     '0.7.3',
+silly versions     '0.7.4',
+silly versions     '0.8.0',
+silly versions     '0.9.0',
+silly versions     '0.9.1',
+silly versions     '0.9.2',
+silly versions     '0.10.0',
+silly versions     '0.11.0',
+silly versions     '0.11.1',
+silly versions     '0.11.2',
+silly versions     '0.11.3',
+silly versions     '0.11.4',
+silly versions     '0.11.5',
+silly versions     '0.11.6',
+silly versions     '0.11.7',
+silly versions     '0.11.8',
+silly versions     '0.11.9',
+silly versions     '0.11.10',
+silly versions     '0.11.11',
+silly versions     '0.11.12',
+silly versions     '0.12.0',
+silly versions     '0.12.1',
+silly versions     '0.12.2',
+silly versions     '0.12.3',
+silly versions     '0.12.4',
+silly versions     '0.13.0',
+silly versions     '0.13.1',
+silly versions     '0.13.2',
+silly versions     '0.13.3',
+silly versions     '0.13.4',
+silly versions     '0.13.5',
+silly versions     '0.13.6',
+silly versions     '0.13.7',
+silly versions     '0.13.8',
+silly versions     '0.13.9',
+silly versions     '0.14.0',
+silly versions     '0.15.0',
+silly versions     '0.15.1',
+silly versions     '0.15.2',
+silly versions     '0.15.3',
+silly versions     '0.15.4',
+silly versions     '0.16.0',
+silly versions     '0.17.0',
+silly versions     '0.18.0',
+silly versions     '0.19.0',
+silly versions     '0.19.1',
+silly versions     '0.19.2',
+silly versions     '0.19.3',
+silly versions     '0.19.4',
+silly versions     '0.19.5',
+silly versions     '0.19.6',
+silly versions     '0.19.7',
+silly versions     '0.19.8',
+silly versions     '0.20.0',
+silly versions     '0.20.1',
+silly versions     '0.21.0',
+silly versions     '0.21.1',
+silly versions     '0.21.2',
+silly versions     '0.22.0',
+silly versions     '0.22.1',
+silly versions     '0.22.2',
+silly versions     '0.22.3',
+silly versions     '0.22.4',
+silly versions     '0.22.5',
+silly versions     '0.22.6',
+silly versions     '0.23.0',
+silly versions     '0.24.0',
+silly versions     '0.25.0',
+silly versions     '0.26.0',
+silly versions     '0.26.1',
+silly versions     '0.27.0',
+silly versions     '0.27.1',
+silly versions     '0.27.2',
+silly versions     '0.28.0',
+silly versions     '0.28.1',
+silly versions     '0.28.2',
+silly versions     '0.29.0',
+silly versions     '0.30.0',
+silly versions     '0.30.1',
+silly versions     '0.31.0',
+silly versions     '0.32.0',
+silly versions     '0.32.1',
+silly versions     '0.33.0',
+silly versions     '0.33.1',
+silly versions     '0.34.0',
+silly versions     '0.34.1',
+silly versions     '0.35.0',
+silly versions     '0.35.1',
+silly versions     '0.36.0',
+silly versions     '0.36.1',
+silly versions     '0.37.0',
+silly versions     '0.38.0',
+silly versions     '0.39.0',
+silly versions     '0.39.1',
+silly versions     '0.39.2',
+silly versions     '0.39.3',
+silly versions     '0.39.4',
+silly versions     '0.40.0',
+silly versions     '0.40.1',
+silly versions     '0.40.2',
+silly versions     '0.40.3',
+silly versions     '0.41.0',
+silly versions     '0.41.1',
+silly versions     '0.41.2',
+silly versions     '0.41.3' ] ]
+verbose bin dist [ '0.6-ares1.7.5-evundefined-openssl1.0.1-v83.7.12.22-linux-ia32-3.2.0-23-generic-pae',
+verbose bin dist   { shasum: '0a49c3f2f4f6b6719e7cca823052b9df87acaeb7',
+verbose bin dist     tarball: 'http://registry.npmjs.org/stylus/-/stylus-0.41.3.tgz' } ]
+verbose addRemoteTarball [ 'https://registry.npmjs.org/stylus/-/stylus-0.41.3.tgz',
+verbose addRemoteTarball   '0a49c3f2f4f6b6719e7cca823052b9df87acaeb7' ]
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1387508225320'
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1387508225320/1387508225320-0.641042836708948'
+verbose mkdir done: /tmp/npm-1387508225320/1387508225320-0.641042836708948 755
+verbose fetch to /tmp/npm-1387508225320/1387508225320-0.641042836708948/tmp.tgz
+http GET https://registry.npmjs.org/stylus/-/stylus-0.41.3.tgz
+http 200 https://registry.npmjs.org/stylus/-/stylus-0.41.3.tgz
+silly updated sha bytes 40960
+silly updated sha bytes 27028
+info shasum 0a49c3f2f4f6b6719e7cca823052b9df87acaeb7
+info shasum /tmp/npm-1387508225320/1387508225320-0.641042836708948/tmp.tgz
+verbose mkdir (expected) error ENOENT, no such file or directory '/tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm'
+verbose mkdir done: /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /tmp/npm-1387508225320/1387508225320-0.641042836708948/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/index.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/LICENSE
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/package.json
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/bm.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/Readme.md
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/bin
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/bin/stylus
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/units.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/errors.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/renderer.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/middleware.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/lexer.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/parser.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/colors.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/browserify.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/utils.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/token.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/stylus.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/convert
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/convert/css.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/functions
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/functions/index.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/functions/index.styl
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/functions/url.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/functions/resolver.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/functions/image.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/stack
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/stack/index.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/stack/scope.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/stack/frame.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/index.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/extend.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/null.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/call.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/property.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/ident.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/selector.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/keyframes.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/media.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/binop.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/object.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/ternary.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/page.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/params.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/member.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/mozdocument.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/block.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/function.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/expression.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/unit.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/root.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/each.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/rgba.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/node.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/jsliteral.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/boolean.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/return.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/fontface.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/arguments.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/if.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/literal.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/string.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/group.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/unaryop.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/import.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/comment.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/hsla.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/nodes/charset.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/visitor
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/visitor/index.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/visitor/normalizer.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/visitor/evaluator.js
+silly asyncMap in gTP /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package/lib/visitor/compiler.js
+silly chmod package 755
+silly chmod bin 755
+silly chmod lib 755
+silly chmod convert 755
+silly chmod functions 755
+silly chmod stack 755
+silly chmod nodes 755
+silly chmod visitor 755
+verbose gunzed /tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package
+verbose rm'ed /tmp/npm-1387508225320/1387508225320-0.641042836708948/package
+verbose renamed [ '/tmp/npm-1387508225320/1387508225320-0.641042836708948/___package.npm/package',
+verbose renamed   '/tmp/npm-1387508225320/1387508225320-0.641042836708948/package' ]
+verbose caching /tmp/npm-1387508225320/1387508225320-0.641042836708948/package/package.json
+verbose loadDefaults stylus@0.41.3
+verbose tarball contents [ 'package', 'tmp.tgz' ]
+verbose from cache /tmp/npm-1387508225320/1387508225320-0.641042836708948/package/package.json
+verbose pack /tmp/npm-1387508225320/1387508225320-0.641042836708948/package
+verbose pack /tmp/npm-1387508225320/1387508225320-0.641042836708948/package /home/fabian/.npm/stylus/0.41.3/package.tgz
+silly makeList /tmp/npm-1387508225320/1387508225320-0.641042836708948/package
+silly dir, dirLen [ '/tmp/npm-1387508225320/1387508225320-0.641042836708948/package',
+silly dir, dirLen   63 ]
+verbose tarball /home/fabian/.npm/stylus/0.41.3/package.tgz
+verbose parent /tmp/npm-1387508225320/1387508225320-0.641042836708948/package
+verbose mkdir (expected) error ENOENT, no such file or directory '/home/fabian/.npm/stylus/0.41.3/___package.npm'
+verbose mkdir done: /home/fabian/.npm/stylus/0.41.3/___package.npm 755
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /home/fabian/.npm/stylus/0.41.3/package
+silly gunzTarPerm modes [ '755', '644' ]
+silly afterUntar ok
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/index.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/LICENSE
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/package.json
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/bm.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/Readme.md
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/bin
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/bin/stylus
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/units.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/errors.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/renderer.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/middleware.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/lexer.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/parser.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/colors.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/browserify.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/utils.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/token.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/stylus.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/convert
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/convert/css.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/functions
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/functions/index.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/functions/index.styl
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/functions/url.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/functions/resolver.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/functions/image.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/stack
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/stack/index.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/stack/scope.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/stack/frame.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/index.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/extend.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/null.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/call.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/property.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/ident.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/selector.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/keyframes.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/media.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/binop.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/object.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/ternary.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/page.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/params.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/member.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/mozdocument.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/block.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/function.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/expression.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/unit.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/root.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/each.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/rgba.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/node.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/jsliteral.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/boolean.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/return.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/fontface.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/arguments.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/if.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/literal.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/string.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/group.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/unaryop.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/import.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/comment.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/hsla.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/nodes/charset.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/visitor
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/visitor/index.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/visitor/normalizer.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/visitor/evaluator.js
+silly asyncMap in gTP /home/fabian/.npm/stylus/0.41.3/___package.npm/package/lib/visitor/compiler.js
+silly chmod package 755
+verbose gunzed /home/fabian/.npm/stylus/0.41.3/___package.npm/package
+verbose rm'ed /home/fabian/.npm/stylus/0.41.3/package
+verbose renamed [ '/home/fabian/.npm/stylus/0.41.3/___package.npm/package',
+verbose renamed   '/home/fabian/.npm/stylus/0.41.3/package' ]
+verbose caching /home/fabian/.npm/stylus/0.41.3/package/package.json
+verbose loadDefaults stylus@0.41.3
+silly updated sha bytes 40960
+silly updated sha bytes 20435
+info shasum 87873c996342c378dae18320339bc41711cb6f94
+info shasum /home/fabian/.npm/stylus/0.41.3/package.tgz
+verbose from cache /home/fabian/.npm/stylus/0.41.3/package/package.json
+verbose chmod /home/fabian/.npm/stylus/0.41.3/package.tgz 644
+verbose chown [ '/home/fabian/.npm/stylus/0.41.3/package.tgz', 1000, 1000 ]
+silly resolved [ { name: 'stylus',
+silly resolved     description: 'Robust, expressive, and feature-rich CSS superset',
+silly resolved     version: '0.41.3',
+silly resolved     author: { name: 'TJ Holowaychuk', email: 'tj@vision-media.ca' },
+silly resolved     keywords: [ 'css', 'parser', 'style', 'stylesheets', 'jade', 'language' ],
+silly resolved     repository: { type: 'git', url: 'git://github.com/LearnBoost/stylus.git' },
+silly resolved     main: './index.js',
+silly resolved     browserify: './lib/browserify.js',
+silly resolved     engines: { node: '*' },
+silly resolved     bin: { stylus: './bin/stylus' },
+silly resolved     scripts: { prepublish: 'npm prune', test: 'make test' },
+silly resolved     dependencies: { cssom: '0.2.x', mkdirp: '0.3.x', debug: '*', sax: '0.5.x' },
+silly resolved     devDependencies: { should: '*', mocha: '*' },
+silly resolved     _id: 'stylus@0.41.3',
+silly resolved     optionalDependencies: {},
+silly resolved     _engineSupported: true,
+silly resolved     _npmVersion: '1.1.4',
+silly resolved     _nodeVersion: 'v0.6.12',
+silly resolved     _defaultsLoaded: true,
+silly resolved     dist: { shasum: '87873c996342c378dae18320339bc41711cb6f94' },
+silly resolved     _from: 'stylus' } ]
+info into /usr/local/lib stylus@0.41.3
+info installOne stylus@0.41.3
+verbose from cache /home/fabian/.npm/stylus/0.41.3/package/package.json
+info unbuild /usr/local/lib/node_modules/stylus
+verbose mkdir (expected) error ENOENT, no such file or directory '/usr/local/lib/node_modules'
+verbose unpack_ uid, gid [ undefined, undefined ]
+verbose unpackTarget /usr/local/lib/node_modules/stylus
+ERR! Could not create /usr/local/lib/node_modules/___stylus.npm
+ERR! error installing stylus@0.41.3
+info unbuild /usr/local/lib/node_modules/stylus
+verbose installOne cb stylus@0.41.3
+ERR! Error: EACCES, permission denied '/usr/local/lib/node_modules'
+ERR! 
+ERR! Please try running this command again as root/Administrator.
+ERR! 
+ERR! System Linux 3.2.0-23-generic-pae
+ERR! command "node" "/usr/bin/npm" "install" "-g" "stylus"
+ERR! cwd /home/fabian/Cartas-Web
+ERR! node -v v0.6.12
+ERR! npm -v 1.1.4
+ERR! path /usr/local/lib/node_modules
+ERR! code EACCES
+ERR! message EACCES, permission denied '/usr/local/lib/node_modules'
+ERR! errno {}
+verbose exit [ 1, true ]

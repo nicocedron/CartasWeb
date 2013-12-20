@@ -1,0 +1,12 @@
+h1,h2,h3,h4,h5,h6,p,ul,li{margin:0;padding:0}
+.border-left{border-left:1px solid #fff}
+.style-inline,header h1,header nav,header nav ul li{display:inline-block;vertical-align:middle}
+section#container{margin:0 auto;width:100%;max-width:1200px}
+html,body{height:100%}
+body{background:#f1f1f1;font-size:62.5%;font-family:'Open Sans',sans-serif}
+header{background:#6bbde8;}
+header h1{width:20%;max-width:150px;}
+header h1 img{width:100%;display:block}
+header nav{width:80%;text-align:right;}
+header nav ul{list-style:none;}
+header nav ul li a{text-decoration:none;color:#fff;border-right:1px solid #fff;font-size:1.3em;font-family:"raleway";font-weight:400;padding:5px 10px}

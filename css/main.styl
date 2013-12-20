@@ -1,0 +1,70 @@
+/* Import nib*/
+@import "nib"
+
+/* Import fuentes */
+@import "fonts"
+
+/* Import colores */
+@import "colors"
+
+/* Reset */
+h1,h2,h3,h4,h5,h6,p,ul,li
+    margin 0
+    padding 0
+
+/* Border left */
+.border-left
+    border-left 1px solid $blanco
+
+/* Uso de extend como clase global */
+.style-inline
+    display inline-block
+    vertical-align middle
+
+/* Contenedor */
+section#container
+    margin 0 auto
+    width 100%
+    max-width 1200px
+
+html,body
+    height 100%
+    
+body
+    background $gris-claro
+    font-size 62.5%
+    font-family $open
+
+/*Start module header*/
+header
+    background $azul
+
+    h1
+        width 20%
+        max-width 150px;
+        @extend .style-inline
+
+        img
+            width 100%
+            display block 
+    nav
+        width 80%
+        @extend .style-inline
+        text-align right
+
+        ul
+            list-style none
+
+            li
+                @extend .style-inline
+
+                a
+                    text-decoration none
+                    color $blanco
+                    border-right 1px solid $blanco
+                    font-size 1.3em
+                    font-family "raleway"
+                    font-weight 400
+                    padding: 5px 10px;
+
+/*End module header*/
