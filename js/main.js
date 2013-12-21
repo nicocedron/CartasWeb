@@ -1,1 +1,27 @@
+$(document).on('ready',Block);
 
+
+function Block(){
+	IncrementBlocks();
+	$('#content').BlocksIt({
+		numOfCol: Math.round($('#content').width()/294),
+		offsetX: 10,
+		offsetY: 10
+	});
+
+		$(window).on('resize',function() {
+				$('#content').BlocksIt({
+					numOfCol: Math.round($('#content').width()/320),
+					offsetX: 8,
+					offsetY: 8
+				});
+		});
+}
+
+//Simulate Blocks
+function IncrementBlocks(){
+	var content=$('#content').html();
+	$('#content').append(content);
+	$('#content').append(content);
+	$('#content').append(content);
+}

@@ -10,8 +10,8 @@ header h1 img{width:100%;display:block}
 header nav{width:80%;text-align:right;}
 header nav ul{list-style:none;}
 header nav ul li a{text-decoration:none;color:#999;font-size:1.3em;font-family:"raleway";font-weight:400;padding:5px 10px}
-section#content{margin-top:40px;text-align:center;}
-section#content .wrapper{background:#fff;margin:1%;vertical-align:top;width:20%;}
+section#content{margin-top:40px;text-align:center;position:relative;}
+section#content .wrapper{background:#fff;margin:1%;vertical-align:top;width:20%;-webkit-transition:top 0.5s, left 0.5s;-moz-transition:top 0.5s, left 0.5s;-o-transition:top 0.5s, left 0.5s;-ms-transition:top 0.5s, left 0.5s;transition:top 0.5s, left 0.5s;}
 section#content .wrapper h1.title{background:#6bbde8;color:#fff;font-family:'Raleway',sans-serif;font-size:2em;font-weight:200;padding:10px;text-align:center}
 section#content .wrapper .box-image{width:100%;}
 section#content .wrapper .box-image img{display:block;width:100%}
