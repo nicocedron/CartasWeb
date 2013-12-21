@@ -35,9 +35,12 @@ body
     font-size 62.5%
     font-family $open
 
-/*Start module header*/
+/* Start module header */
 header
-    background $azul
+    background $blanco
+    border-top 10px solid #becede
+    border-bottom 1px solid #EBEBEB
+    padding 45px
 
     h1
         width 20%
@@ -60,11 +63,93 @@ header
 
                 a
                     text-decoration none
-                    color $blanco
-                    border-right 1px solid $blanco
+                    color #999
                     font-size 1.3em
                     font-family "raleway"
                     font-weight 400
                     padding: 5px 10px;
 
-/*End module header*/
+/* End module header */
+
+/* Start module section#content */
+section#content
+    margin-top 40px
+    text-align center
+
+    /* Start module .wrapper (Card) */
+
+    .wrapper
+        background $blanco
+        margin 1%
+        vertical-align top
+        width 20%
+        @extend .style-inline
+
+        h1.title
+            background $blue
+            color $blanco
+            font-family $rale
+            font-size 2em
+            font-weight 200
+            padding 10px
+            text-align center
+
+        .box-image
+            width 100%
+
+            img
+                display block
+                width 100%
+
+        .box-border
+            border 1px solid #e5e5e5
+            font-family $roboto
+            text-align left
+
+            .description
+                padding 5px 7px
+                border-bottom 1px solid #e5e5e5
+
+                h2
+                    font-size: 1.6em;
+                    color: #404040;
+                    font-weight: 400;
+
+
+                h3
+                    color: #808080;
+                    font-size: 1.3em;
+                    font-weight: 200;
+                    
+            .box-footer
+                background #f8f8f8
+                padding 5px
+
+                .share
+                    text-align center
+
+                    ul
+                        list-style none
+                        @extend .style-inline
+
+                        li
+                            @extend .style-inline
+                            vertical-align top
+                    h2
+                        padding 0 5px 5px
+                        color #8B8B8B
+                        font-size 1.4em
+                        font-weight 200
+                        @extend .style-inline
+
+                        .count
+                            color $blue
+                .hour                   
+                    padding 0 5px 5px
+                    color #404040
+                    font-size 1.3em
+                    font-weight 200
+
+    /* End module .wrapper (Card) */
+
+/* End module section#content */
