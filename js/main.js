@@ -1,6 +1,7 @@
 $(document).on('ready',function(){
 	IncrementBlocks();
 	Block();
+	$(window).on('resize',Block);
 	$('img').on('load',Block);
 });
 
@@ -13,13 +14,6 @@ function Block(){
 		offsetY: 8
 	});
 
-		$(window).on('resize',function() {
-				$('#content').BlocksIt({
-					numOfCol: Math.round($('#content').width()/320),
-					offsetX: 8,
-					offsetY: 8
-				});
-		});
 }
 
 //Simulate Blocks
