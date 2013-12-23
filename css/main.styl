@@ -4,6 +4,9 @@
 /* Import fuentes */
 @import "fonts"
 
+/* Import icons */
+@import "icons"
+
 /* Import colores */
 @import "colors"
 
@@ -25,7 +28,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li
 section#container
     margin 0 auto
     width 100%
-    max-width 1200px
+    max-width 1400px
 
 html,body
     height 100%
@@ -42,32 +45,33 @@ header
     border-bottom 1px solid #EBEBEB
     padding 45px
 
-    h1
-        width 20%
-        max-width 150px;
-        @extend .style-inline
+    section#container
+        h1
+            width 20%
+            max-width 150px;
+            @extend .style-inline
 
-        img
-            width 100%
-            display block 
-    nav
-        width 80%
-        @extend .style-inline
-        text-align right
+            img
+                width 100%
+                display block 
+        nav
+            width 80%
+            @extend .style-inline
+            text-align right
 
-        ul
-            list-style none
+            ul
+                list-style none
 
-            li
-                @extend .style-inline
+                li
+                    @extend .style-inline
 
-                a
-                    text-decoration none
-                    color #999
-                    font-size 1.3em
-                    font-family "raleway"
-                    font-weight 400
-                    padding: 5px 10px;
+                    a
+                        text-decoration none
+                        color #999
+                        font-size 1.3em
+                        font-family "raleway"
+                        font-weight 400
+                        padding: 5px 10px;
 
 /* End module header */
 
@@ -88,7 +92,7 @@ section#content
         @extend .style-inline
 
         h1.title
-            background $blue
+            background $green
             color $blanco
             font-family $rale
             font-size 2em
@@ -128,29 +132,41 @@ section#content
                 padding 5px
 
                 .share
-                    text-align center
+                    text-align left
 
-                    ul
-                        list-style none
-                        @extend .style-inline
-
-                        li
-                            @extend .style-inline
-                            vertical-align top
                     h2
                         padding 0 5px 5px
                         color #8B8B8B
                         font-size 1.4em
                         font-weight 200
-                        @extend .style-inline
 
-                        .count
-                            color $blue
+                    ul
+                        list-style none
+                        @extend .style-inline
+                        vertical-align top
+
+                        li
+                            @extend .style-inline
+                            vertical-align top
+                    
+                    .count
+                        margin-left 1%
+                        @extend .style-inline
+                        color $blue
+                        vertical-align top
+                        font-size 1.3em
+                        font-weight 200
+
                 .hour                   
                     padding 0 5px 5px
-                    color #404040
+                    color #696969
                     font-size 1.3em
-                    font-weight 200
+
+                    p:before
+                        font-family 'icomoon'
+                        content "\e600"
+                        font-weight 300
+                        margin-right 2%
 
     /* End module .wrapper (Card) */
 
