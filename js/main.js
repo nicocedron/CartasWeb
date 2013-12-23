@@ -1,8 +1,12 @@
-$(document).on('ready',Block);
+$(document).on('ready',function(){
+	IncrementBlocks();
+	Block();
+	$('img').on('load',Block);
+});
 
 
 function Block(){
-	IncrementBlocks();
+	
 	$('#content').BlocksIt({
 		numOfCol: Math.round($('#content').width()/294),
 		offsetX: 8,

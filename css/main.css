@@ -15,18 +15,18 @@ header section#container nav ul{list-style:none;}
 header section#container nav ul li a{text-decoration:none;color:#999;font-size:1.3em;font-family:"raleway";font-weight:400;padding:5px 10px}
 section#content{margin-top:40px;text-align:center;position:relative;}
 section#content .wrapper{background:#fff;margin:1%;vertical-align:top;width:20%;-webkit-transition:top 0.5s, left 0.5s;-moz-transition:top 0.5s, left 0.5s;-o-transition:top 0.5s, left 0.5s;-ms-transition:top 0.5s, left 0.5s;transition:top 0.5s, left 0.5s;}
-section#content .wrapper h1.title{background:#94d74a;color:#fff;font-family:'Raleway',sans-serif;font-size:2em;font-weight:200;padding:10px;text-align:center}
+section#content .wrapper h1.title{background:#1570a6;color:#fff;font-family:'Raleway',sans-serif;font-size:2em;font-weight:200;padding:10px;text-align:center;word-wrap:break-word}
 section#content .wrapper .box-image{width:100%;}
 section#content .wrapper .box-image img{display:block;width:100%}
 section#content .wrapper .box-border{border:1px solid #e5e5e5;font-family:'Roboto Condensed',sans-serif;text-align:left;}
-section#content .wrapper .box-border .description{padding:5px 7px;border-bottom:1px solid #e5e5e5;}
+section#content .wrapper .box-border .description{padding:5px 10px;border-bottom:1px solid #e5e5e5;}
 section#content .wrapper .box-border .description h2{font-size:1.6em;color:#404040;font-weight:400}
 section#content .wrapper .box-border .description h3{color:#808080;font-size:1.3em;font-weight:200}
-section#content .wrapper .box-border .box-footer{background:#f8f8f8;padding:5px;}
-section#content .wrapper .box-border .box-footer .share{text-align:left;}
+section#content .wrapper .box-border .box-footer{background:#f8f8f8;}
+section#content .wrapper .box-border .box-footer .share{text-align:left;padding:5px 10px 8px;}
 section#content .wrapper .box-border .box-footer .share h2{padding:0 5px 5px;color:#8b8b8b;font-size:1.4em;font-weight:200}
 section#content .wrapper .box-border .box-footer .share ul{list-style:none;vertical-align:top;}
 section#content .wrapper .box-border .box-footer .share ul li{vertical-align:top}
 section#content .wrapper .box-border .box-footer .share .count{margin-left:1%;color:#6bbde8;vertical-align:top;font-size:1.3em;font-weight:200}
-section#content .wrapper .box-border .box-footer .hour{padding:0 5px 5px;color:#696969;font-size:1.3em;}
+section#content .wrapper .box-border .box-footer .hour{background:#fff;border-top:1px solid #e5e5e5;color:#696969;font-size:1.3em;padding:6px 10px;}
 section#content .wrapper .box-border .box-footer .hour p:before{font-family:'icomoon';content:"\e600";font-weight:300;margin-right:2%}
