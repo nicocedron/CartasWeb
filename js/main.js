@@ -5,8 +5,8 @@ function Block(){
 	IncrementBlocks();
 	$('#content').BlocksIt({
 		numOfCol: Math.round($('#content').width()/294),
-		offsetX: 10,
-		offsetY: 10
+		offsetX: 8,
+		offsetY: 8
 	});
 
 		$(window).on('resize',function() {
