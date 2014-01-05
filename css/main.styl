@@ -34,21 +34,16 @@ html,body
     height 100%
     
 body
-    background $gris-claro
     font-size 62.5%
     font-family $open
 
 /* Start module header */
 header
-    background $blanco
-    border-top 10px solid #becede
-    border-bottom 1px solid #EBEBEB
-    padding 45px
+    padding 25px 0
 
     section#container
         h1
-            width 20%
-            max-width 150px;
+            width 19%
             @extend .style-inline
 
             img
@@ -65,111 +60,104 @@ header
                 li
                     @extend .style-inline
 
+                    &:last-child
+                        a
+                            padding 5px 0
                     a
                         text-decoration none
-                        color #999
+                        color $negro
                         font-size 1.3em
                         font-family "raleway"
                         font-weight 400
-                        padding: 5px 10px;
+                        padding: 5px 10px
+
+                    .box-search
+                        border 1px solid #666
+                        width 100%
+
+                        input
+                            display inline-block
+                            padding 4px
+                            border none
+                            font-size 1.4em
+                            outline 0
+                            vertical-align middle
+
+                        input[type="submit"]
+                            width 25px
+                            border-left 1px solid #666
+                            font-family "icomoon"
+                            background $blanco
 
 /* End module header */
 
 /* Start module section#content */
 section#content
-    margin-top 40px
     text-align center
     position relative
+
+    /* Start module .order */
+    .order
+        text-align left
+        margin 15px 0
+
+        ul
+            list-style none
+
+            li
+                @extend .style-inline
+                color $negro
+                font-size 1.3em
+                font-family "raleway"
+                font-weight 400
+
+                a
+                    text-decoration: none
+                    padding 5px 10px
+                    color $negro
+                    background $gris-claro
+
+    /* End module .order */
 
     /* Start module .wrapper (Card) */
 
     .wrapper
-        background $blanco
-        margin 1%
+        background $gris-claro
+        margin 1% 0.3%
         vertical-align top
-        width 20%
+        width 19%
+        min-width 190px
         transition top 0.5s, left 0.5s
         @extend .style-inline
 
-        h1.title
-            background $royal-blue
-            color $blanco
-            font-family $rale
-            font-size 2em
-            font-weight 200
-            padding 10px
-            text-align center
-            word-wrap break-word
-
         .box-image
+            overflow hidden
             width 100%
 
             img
                 display block
-                width 100%
+                height 150px
 
-        .box-border
-            border 1px solid #e5e5e5
+        .border
+            height 5px
+            background $green
+
+        .box-footer
             font-family $roboto
             text-align left
+            padding 2%
 
-            .description
-                padding 5px 10px
-                border-bottom 1px solid #e5e5e5
-
-                h2
-                    font-size: 1.6em;
-                    color: #404040;
-                    font-weight: 400;
-
-
-                h3
-                    color: #808080;
-                    font-size: 1.3em;
-                    font-weight: 200;
-                    
-            .box-footer
-                background #f8f8f8
-
-                .share
-                    text-align left
-                    padding: 5px 10px 8px
-
-                    h2
-                        padding 0 5px 5px
-                        color #8B8B8B
-                        font-size 1.4em
-                        font-weight 200
-
-                    ul
-                        list-style none
-                        @extend .style-inline
-                        vertical-align top
-
-                        li
-                            @extend .style-inline
-                            vertical-align top
-                    
-                    .count
-                        margin-left 1%
-                        @extend .style-inline
-                        color $blue
-                        vertical-align top
-                        font-size 1.3em
-                        font-weight 200
-
-                .hour                   
-                    background #fff
-                    border-top 1px solid #e5e5e5
-                    color #696969
-                    font-size 1.3em
-                    padding 6px 10px
-
-                    p:before
-                        font-family 'icomoon'
-                        content "\e600"
-                        font-weight 300
-                        margin-right 2%
+            h2
+                font-size 1.4em
+                font-weight 200
+                height 38px
+                
+                strong
+                    font-weight 400
+            
+            h3
+                font-size 1.1em
+                font-weight 200
 
     /* End module .wrapper (Card) */
 

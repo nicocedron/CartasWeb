@@ -1,4 +1,4 @@
-$(document).on('ready',function(){
+/*$(document).on('ready',function(){
 	IncrementBlocks();
 	Block();
 	$(window).on('resize',Block);
@@ -23,3 +23,4 @@ function IncrementBlocks(){
 	$('#content').append(content);
 	$('#content').append(content);
 }
+*/
