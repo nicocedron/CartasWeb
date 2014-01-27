@@ -386,12 +386,298 @@ section#content
                 font-family $rale
                 
 
-
-
-
-
-
-
     /* End module .wrapper (Card) */
 
 /* End module section#content */
+
+/* Start module section.box-content*/
+
+.box-content
+    border 1px solid #bababa
+    margin 20px 0
+    overflow hidden
+    font-family 'Raleway',sans-serif
+
+
+    .column
+        @extend .style-inline 
+        width 39%
+        vertical-align top
+
+        &:first-child
+            width 20%
+            
+        &:last-child
+            width 39%
+
+    .colOne
+        ul
+            list-style none
+
+            li.title
+                text-align center
+                background #6dbe45
+                padding 0
+                
+                a
+                    text-decoration: none
+                    font-size 1.6em
+                    padding 10px
+                    color #fff
+                    display block
+                    font-family: 'Raleway',sans-serif
+
+                    &:after
+                        content "\e601"
+                        font-family "icomoon"
+                        margin-right 8px
+                        font-size 2em
+                        vertical-align middle
+                        color $gris-claro
+
+            li.iniciar
+                background $gris-claro
+                padding 0
+
+                a
+                    text-decoration none
+                    font-size 1.4em
+                    padding 10px
+                    color #000
+                    display block
+                    font-family 'Raleway',sans-serif
+
+            li
+                position relative
+                padding 10px 0
+                border-bottom 1px solid #bababa
+                border-right 1px solid #bababa
+
+                .img-left
+                    float left
+                    width 60%
+                    overflow hidden
+
+                    .box-image
+                        float left
+                        margin-left 3px
+                        width 25px
+                        height 25px
+                        @extend .style-inline
+
+                        img
+                            width 100%
+                            display inline-block
+                
+                h4
+                    float left
+                    width 40%
+                    font-style italic
+                    text-align right
+                    font-family $roboto
+                    font-weight 200
+                    font-size 1.1em
+
+                h2
+                    font-size 1.5em
+                    font-family $roboto
+                    font-weight 400
+
+    .colTwo
+        font-family $roboto
+        margin-left 1%
+
+        h4
+            font-size 1.2em
+            font-weight 200            
+
+        h1
+            font-size 2em
+            margin 5px 0 15px
+            font-weight 400            
+
+        ul
+            list-style none
+
+            li
+                margin 5px 0
+
+                h3.person
+                    font-size 1.4em
+                    font-weight 500
+                    margin-bottom 3px 
+
+                h4
+                    font-size 1.2em
+                    font-weight 200 
+
+                h5
+                    text-align center
+                    font-size 1.2em
+                    font-weight 200
+                    font-style italic
+
+                .box-carta
+                    position relative
+                    margin 10px 0 
+
+                    .image
+                        width 200px
+                        height 50px
+                        position absolute
+                        left 0
+                        top 0
+                        bottom 0
+
+                        img
+                            display block
+                            width 100%
+                            height 58px
+
+                    .content
+                        padding-left 205px
+                        background $gris-claro
+
+                        h2
+                            font-size 1.2em
+                            font-weight 200
+
+                        h3
+                            font-size 1em
+                            font-weight 200
+
+    .content-foo
+        .box-textarea
+            overflow hidden
+            width 30%
+            display none !important
+
+            textarea
+                width 90%
+                display block
+                border none
+                border 1px solid #bababa
+                height 300px
+                position relative
+
+        .box-icons
+            width 50%
+            text-align center
+
+            ul
+                list-style none
+
+                li
+                    text-align center
+                    background $gris-oscuro
+                    width 50px
+                    height 100px
+
+    .colThree
+        ul 
+            list-style none
+            text-align right
+            float right
+
+            li
+                display block
+                margin 3px 0
+
+                a                  
+                    display block
+                    text-decoration none
+                    background $B2
+                    padding 5px 
+                    color #fff
+
+        .wrapper-new
+            border: 3px solid #bababa;
+            display: block;
+            padding: 15px
+            position: relative;
+            margin: 70px 0;
+
+            a.exit
+                display block
+                position absolute
+                top 5px
+                right 5px
+                background $gris-claro
+                font-size 3em
+                color $gris-oscuro
+                text-decoration none
+                padding 5px 15px
+
+            .description
+                width 50%
+                @extend .style-inline
+
+                h2
+                    font-size: 1.6em;
+                    font-weight: 300;
+                    margin-bottom: 15px;
+                h5
+                    font-size: 1.2em;
+                    font-weight: 200;
+                h3
+                    font-size: 1.4em;
+                    font-weight: 200;
+                    margin: 12px 0;
+
+                .options
+                    ul
+                        list-style none
+                        text-align center
+                        
+                        li
+                            width 10px
+                            height 10px
+                            margin 0 3px
+                            border-radius 10px
+
+                h4
+                    font-size: 1.4em;
+                    font-weight: 200;
+                    margin: 10px 0;
+
+                    &:before
+                        content: "\66";
+                        font-family: "icomoon";
+                        margin-right: 8px;
+                        font-size: 2em;
+                        vertical-align: middle;
+                        color: #197db6;
+            .add
+                width 48%
+                @extend .style-inline
+
+                a
+                    text-decoration: none;
+                    font-size: 1.6em;
+                    padding: 5px 10px;
+                    color: #000;
+                    background: #e5e5e5;
+                    display: block;
+                    font-family: 'Raleway',sans-serif;
+                    margin-top 40px
+
+                ul
+                    margin-top 25px
+                    text-align right
+
+                    li
+                        border-bottom: 2px solid #bababa;
+                        margin-bottom: 10px;
+                        font-size: 1.4em;
+                        font-weight: 200;
+
+                        span
+                            text-align: left;
+                            width: 83%;
+
+                        input
+                            text-align: right;
+                            width: 15%;
+
+
+/* End module section.box-content*/
