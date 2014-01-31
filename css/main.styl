@@ -30,6 +30,14 @@ h1,h2,h3,h4,h5,h6,p,ul,li
     color #fff 
     border-none
 
+/* Linea */
+.linea
+    width 1px
+    background #bababa
+    height 100%
+    @extend .style-inline
+    vertical-align top
+
 /* Contenedor */
 section#container
     margin 0 auto
@@ -143,6 +151,7 @@ section#content
             img
                 display block
                 height 150px
+                width 100%
 
         .border
             height 5px
@@ -214,7 +223,7 @@ section#content
             .box-image
                 position relative
                 max-width 192px
-                width 50%
+                width 36%
                 @extend .style-inline
                 vertical-align top
 
@@ -243,7 +252,7 @@ section#content
             .description
                 @extend .style-inline
                 vertical-align top
-                width 44%
+                width 62%
                 text-align left
                 padding-left 2%
 
@@ -401,14 +410,14 @@ section#content
 
     .column
         @extend .style-inline 
-        width 39%
+        width 35%
         vertical-align top
 
         &:first-child
             width 20%
             
-        &:last-child
-            width 39%
+        &:nth-child(3)
+            width 43%
 
     .colOne
         ul
@@ -430,14 +439,15 @@ section#content
                     &:after
                         content "\e601"
                         font-family "icomoon"
-                        margin-right 8px
-                        font-size 2em
+                        margin-left 5px
+                        font-size 1.5em
                         vertical-align middle
                         color $gris-claro
 
             li.iniciar
                 background $gris-claro
                 padding 0
+                text-align center
 
                 a
                     text-decoration none
@@ -447,22 +457,30 @@ section#content
                     display block
                     font-family 'Raleway',sans-serif
 
+                    &:after
+                        content "\e605"
+                        font-family "icomoon"
+                        margin-left 5px
+                        font-size 1.5em
+                        vertical-align middle
+                        color #444
+
             li
                 position relative
-                padding 10px 0
+                padding 7px 5px
                 border-bottom 1px solid #bababa
                 border-right 1px solid #bababa
 
                 .img-left
                     float left
-                    width 60%
+                    width 52%
                     overflow hidden
 
                     .box-image
                         float left
-                        margin-left 3px
-                        width 25px
-                        height 25px
+                        margin-left 2px
+                        width 30px
+                        height 30px
                         @extend .style-inline
 
                         img
@@ -471,7 +489,7 @@ section#content
                 
                 h4
                     float left
-                    width 40%
+                    width 48%
                     font-style italic
                     text-align right
                     font-family $roboto
@@ -479,51 +497,55 @@ section#content
                     font-size 1.1em
 
                 h2
-                    font-size 1.5em
+                    font-size 1.4em
                     font-family $roboto
                     font-weight 400
+                    color #2A2A2A
 
     .colTwo
         font-family $roboto
-        margin-left 1%
+        border-right 1px solid #bababa
+        padding 1% 0 0 1%
+        padding-bottom 50px
 
         h4
-            font-size 1.2em
+            font-size 1.4em
             font-weight 200            
 
         h1
-            font-size 2em
-            margin 5px 0 15px
-            font-weight 400            
+            font-size 2.2em
+            margin 2.5px 0 10px
+            font-weight 400
+            color #353535     
 
         ul
             list-style none
 
             li
-                margin 5px 0
+                margin 10px 0
 
                 h3.person
                     font-size 1.4em
                     font-weight 500
-                    margin-bottom 3px 
+                    color #2C2C2D
 
                 h4
-                    font-size 1.2em
+                    font-size 1.3em
                     font-weight 200 
 
                 h5
                     text-align center
-                    font-size 1.2em
-                    font-weight 200
+                    font-size 1.3em
+                    font-weight 400
                     font-style italic
 
                 .box-carta
                     position relative
-                    margin 10px 0 
+                    margin 7.5px 0 
 
                     .image
                         width 200px
-                        height 50px
+                        height 90px
                         position absolute
                         left 0
                         top 0
@@ -532,70 +554,95 @@ section#content
                         img
                             display block
                             width 100%
-                            height 58px
+                            height 90px
 
                     .content
-                        padding-left 205px
+                        padding-left 207px
                         background $gris-claro
+                        height 90px
 
                         h2
                             font-size 1.2em
                             font-weight 200
+                            padding 10px 0px 5px
 
                         h3
                             font-size 1em
                             font-weight 200
+                            margin 3px 0
+            .acuerdo
+                span.icono
+                    font-size 3em
+                    color #666
+                    @extend .style-inline
+                    margin-right 7px
 
-    .content-foo
-        .box-textarea
-            overflow hidden
-            width 30%
-            display none !important
+                span.textoAcuerdo
+                    font-size 1.3em
+                    font-weight 200
+                    font-style italic
+                    @extend .style-inline
 
-            textarea
-                width 90%
-                display block
-                border none
-                border 1px solid #bababa
-                height 300px
-                position relative
-
-        .box-icons
-            width 50%
-            text-align center
-
-            ul
-                list-style none
-
-                li
-                    text-align center
-                    background $gris-oscuro
-                    width 50px
-                    height 100px
 
     .colThree
-        ul 
+        position relative
+
+        >ul 
             list-style none
-            text-align right
-            float right
+            position absolute
+            top 5px
+            right 0
 
             li
                 display block
-                margin 3px 0
+                margin 5px 0
 
                 a                  
                     display block
                     text-decoration none
                     background $B2
-                    padding 5px 
+                    padding 10px 
                     color #fff
+                    font-size 1.2em
+
+                &:first-child
+                    a:before
+                        content "\e601"
+                        font-family "icomoon"
+                        margin-right 5px
+                        font-size 1.5em
+                        vertical-align middle
+                        color $gris-claro                    
+
+                &:last-child
+                    a:before
+                        content "\e603"
+                        font-family "icomoon"
+                        margin-right 5px
+                        font-size 1.5em
+                        vertical-align middle
+                        color $gris-claro
 
         .wrapper-new
-            border: 3px solid #bababa;
-            display: block;
-            padding: 15px
-            position: relative;
-            margin: 70px 0;
+            border 3px solid #bababa
+            display block
+            padding 9px
+            position relative
+            margin 20px 10px
+
+            &:after
+                width 0
+                height 0
+                position: absolute
+                content ""
+                border-top 10px solid transparent
+                border-right 10px solid #bababa
+                border-bottom 10px solid transparent
+                top 20px
+                left -12px
+            
+            &.marginNew
+                margin 103px 10px 20px
 
             a.exit
                 display block
@@ -603,42 +650,45 @@ section#content
                 top 5px
                 right 5px
                 background $gris-claro
-                font-size 3em
+                font-size 2.5em
                 color $gris-oscuro
                 text-decoration none
                 padding 5px 15px
 
             .description
-                width 50%
+                font-family $roboto
+                width 56%
                 @extend .style-inline
 
                 h2
-                    font-size: 1.6em;
-                    font-weight: 300;
-                    margin-bottom: 15px;
+                    font-size 1.7em
+                    font-weight 300
+                    margin-bottom 7px
+                    line-height 1.3em
                 h5
-                    font-size: 1.2em;
-                    font-weight: 200;
+                    font-size 1.2em
+                    font-weight 200
                 h3
-                    font-size: 1.4em;
-                    font-weight: 200;
-                    margin: 12px 0;
+                    font-size 1.4em
+                    font-weight 200
+                    margin 10px 0
 
                 .options
                     ul
                         list-style none
-                        text-align center
+                        margin 8px 0
                         
                         li
-                            width 10px
-                            height 10px
-                            margin 0 3px
+                            width 15px
+                            height 15px
+                            margin 0 4px
                             border-radius 10px
+                            background #444
+                            @extend .style-inline
 
                 h4
-                    font-size: 1.4em;
-                    font-weight: 200;
-                    margin: 10px 0;
+                    font-size 1.4em
+                    font-weight 200
 
                     &:before
                         content: "\66";
@@ -648,12 +698,12 @@ section#content
                         vertical-align: middle;
                         color: #197db6;
             .add
-                width 48%
+                width 43%
                 @extend .style-inline
 
                 a
                     text-decoration: none;
-                    font-size: 1.6em;
+                    font-size: 1.4em;
                     padding: 5px 10px;
                     color: #000;
                     background: #e5e5e5;
@@ -663,21 +713,77 @@ section#content
 
                 ul
                     margin-top 25px
-                    text-align right
+                    list-style none
 
                     li
-                        border-bottom: 2px solid #bababa;
-                        margin-bottom: 10px;
-                        font-size: 1.4em;
-                        font-weight: 200;
+                        border-bottom 2px solid #bababa
+                        margin-bottom 10px
+                        font-size 1.3em
+                        font-weight 200
 
                         span
-                            text-align: left;
-                            width: 83%;
+                            text-align left
+                            width 82%
+                            @extend .style-inline
 
                         input
-                            text-align: right;
-                            width: 15%;
+                            text-align right
+                            width 15%
+    
+                            @extend .style-inline
+    .content-foo
+        float right
+        width 80%
+        padding-top 24px
+        border-top 1px solid #bababa
+        margin-top -1px
+
+        .box-textarea
+            width 44%
+            float left
+            position relative
+
+            textarea
+                width 94%
+                display block
+                border none
+                border 1px solid #bababa
+                height 100px
+                padding 5px 22px 5px 5px
+                border none
+                font-size 1.4em
+                border 1px solid #bababa
+
+            &:before
+                position absolute
+                top 1px
+                right 0
+                content "\e606"
+                font-family 'icomoon'
+                font-size 2em
+                color #444
+                background $gris-claro
+                border-left 1px solid #bababa
+                border-bottom 1px solid #bababa
+
+
+        .box-icons
+            float left
+            width 56%
+            text-align center
+
+            ul
+                list-style none
+                padding 0 80px
+
+                li
+                    text-align center
+                    background #DEDEDE
+                    width 80px
+                    height 70px
+                    margin 5px
+                    @extend .style-inline
+
 
 
 /* End module section.box-content*/
