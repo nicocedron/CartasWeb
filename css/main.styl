@@ -15,6 +15,9 @@ h1,h2,h3,h4,h5,h6,p,ul,li
     margin 0
     padding 0
 
+*,*:before,*:after
+    box-sizing border-box
+
 /* Border left */
 .border-left
     border-left 1px solid $blanco
@@ -30,6 +33,13 @@ h1,h2,h3,h4,h5,h6,p,ul,li
     color #fff
     border-none
 
+.is-card-selected
+    background $gris-oscuro !important
+
+.is-seccion-active
+    border-bottom 2px solid #9e8e7f !important
+    background #e9eae9 !important
+
 /* Linea */
 .linea
     width 1px
@@ -42,7 +52,7 @@ h1,h2,h3,h4,h5,h6,p,ul,li
 #container
     margin 0 auto
     width 100%
-    max-width 1400px
+    max-width 1408px
     min-width 1000px
 
 #content
@@ -58,39 +68,38 @@ body
 
 /* Start module header */
 header
-    padding 15px 0 10px
+    padding 25px 0 20px
 
     section#container
         clearfix()
 
         a.log
-            width 14%
+            width 160px
             float left
 
             img
                 width 100%
                 display block
         nav
-            width 86%
-            float left
-            text-align right
+            float right
 
             ul
                 list-style none
 
                 li
                     @extend .style-inline
+                    margin-left 5px
 
-                    &:last-child
-                        a
-                            padding 5px 0
                     a
                         text-decoration none
                         color $negro
                         font-size 1.3em
                         font-family "raleway"
                         font-weight 400
-                        padding: 5px 10px
+                        padding 10px
+
+                        &.gray
+                            background $gris-claro
 
                     .box-search
                         border 1px solid #666
@@ -130,10 +139,11 @@ header
         .discover
             width 15%
             font-size 1.4em
-            font-weight 300
+            font-weight 400
             margin-bottom 15px
             display inline-block
             vertical-align middle
+            font-style italic
 
         ul
             width 84.5%
@@ -163,9 +173,11 @@ header
 
                     span.text
                         text-align center
-                        font-size 1.6em
+                        font-size 1.4em
                         font-weight 300
                         color #666
+                        display block
+                        margin-top 5px
 
     .L2,.L3
         ul li a span.color
@@ -265,6 +277,7 @@ section#content
 
                 strong
                     font-weight 400
+                    font-style italic
 
             h3
                 font-size 1.1em
@@ -663,9 +676,11 @@ section#content
 .wrapper-expanded
     border 3px solid $gris-oscuro
     display block
-    padding 15px 0
+    padding 15px 50px
     position relative
     margin 20px 0
+    min-width 1000px
+    width 100%
     clearfix()
 
     &:before
@@ -690,11 +705,14 @@ section#content
         text-decoration none
         padding 5px 15px
 
-    #content
+    #container
+        min-width 0
+
         .box1,.box2,.box3
             font-family $roboto
             margin 0
             float left
+            height 255px
 
             ul
                 list-style none
@@ -704,12 +722,13 @@ section#content
                         text-decoration none
 
         .box1
-            width 480px
+            width 50%
+            //min-width 480px
             margin 0
 
             .box-image
                 position relative
-                width 190px
+                width 27%
                 float left
 
                 img
@@ -735,10 +754,9 @@ section#content
                             display block
 
             .description
-                vertical-align top
-                width 275px
+                width 70%
                 text-align left
-                padding-left 15px
+                padding-left 3%
                 float left
 
                 h2
@@ -748,20 +766,24 @@ section#content
 
                     strong
                         font-weight 400
+                        font-style italic
 
                 h3
                     font-size 1.4em
                     font-weight 200
-                    margin 12px 0
+                    margin 10px 0
 
                 h5
                     font-size 1.2em
                     font-weight 200
 
+                    &.margin
+                        margin 30px 0
+
                 h4
                     font-size 1.4em
                     font-weight 200
-                    margin 10px 0
+                    margin 0
 
                     &:before
                         content "\66"
@@ -772,8 +794,10 @@ section#content
                         color #197db6
 
         .box2
-            width 271px
-            margin 0 30px
+            width 21%
+            //min-width 270px
+            margin 0 3% 0 2%
+
             a
                 text-decoration none
                 font-size 1.6em
@@ -792,6 +816,7 @@ section#content
                 li
                     border-bottom 2px solid $gris-oscuro
                     margin-bottom 10px
+                    padding-bottom 5px
                     font-size 1.4em
                     font-weight 200
 
@@ -809,7 +834,9 @@ section#content
                          width 15%
 
         .box3
-            width 190px
+            width 23%
+            //min-width 190px
+            overflow-x hidden
 
             ul.header-chat
                 background $gris-claro
@@ -882,5 +909,7 @@ section#content
                 background $B1
                 display block
                 font-family $rale
+                text-align center
+                margin-top 10px
 
 /* End module .wrapper expanded (Card) */
