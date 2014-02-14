@@ -25,7 +25,6 @@ function IncrementBlocks(){
 }
 */
 
-$(document).on('ready',slide);
 
 function slide(){
 
@@ -51,3 +50,57 @@ function slide(){
   });
 
 }
+
+
+var template=null;
+function ready(){
+	$('.wrapper').on('click',carta_expand);
+}
+
+function carta_expand(){
+
+	if(template==null){
+		template='</section></section><div style="display:none" id="template_expand" class="wrapper-expanded">'+$('#template_expand').html()+'</div><section id="container"><section id="content">';
+		
+	}
+	if($('#template_expand').length)
+		$('#template_expand').remove();
+
+	var pantalla=$('#content').width();
+	var columnas=parseInt(pantalla/$('.wrapper:eq(0)').outerWidth(true));
+	var cartas=($('.wrapper').length);
+	var filas=Math.ceil(cartas/columnas);
+	var carta=$('.wrapper').index(this);
+	var insertar=1;
+
+	for(i=1;i<cartas;i++){
+		var cond=insertar*columnas;
+
+		if(i>cond)
+			insertar++;
+
+		if(i==(carta+1))
+			break;
+		
+	}
+
+	$(this).addClass('is-card-selected');
+	insertar=(insertar*columnas);
+
+	if(insertar>=cartas)
+		$('.wrapper').eq(cartas-1).after(template);
+	else
+		$('.wrapper').eq(insertar).before(template);
+
+
+$('#template_expand').slideDown();
+
+
+
+	
+
+
+
+}
+$(document).on('ready',ready);
+$(document).on('ready',slide);
