@@ -288,7 +288,8 @@ section#content
 /* Start module section.box-content*/
 
 .box-content
-    border 1px solid #EBEBEB
+    border-left 1px solid #EBEBEB
+    border-top 1px solid #EBEBEB
     margin 20px 0
     overflow hidden
     font-family 'Raleway',sans-serif
@@ -360,7 +361,7 @@ section#content
                         margin-left 1px
                         width 30px
                         height 30px
-                        
+
 
                         img
                             width 100%
@@ -390,6 +391,7 @@ section#content
     .colLarge
         width 80%
         float left
+        border-right 1px solid #EBEBEB
 
         .colChat
             width 40%
@@ -549,6 +551,7 @@ section#content
                 padding 9px
                 position relative
                 margin 20px 10px
+                background #fff
 
                 &:after
                     width 0
@@ -974,19 +977,127 @@ section#content
     bottom 0
     right 0
 
-    .boxAdd
-        margin 30px auto 0
-        width 500px
-        background #444
-        z-index 120
-        height 500px
-        position relative
+.boxAdd
+    margin 30px auto 0
+    width 500px
+    background rgb(245, 245, 245)
+    z-index 120
+    position absolute
+    left 50%
+    right 50%
+    margin-left -250px
+    margin-right -250px
+    box-shadow 0px 2px 2px rgba(0, 0, 0, 0.3)
+    top 50px
 
-        #close
-            position absolute
-            top 0 
-            right 0
-            color #fff
-            background #FB4B4B
+    .invit
+        .headInvit
+            position relative
+            background #666
+
+            h2
+                color #fff
+                padding 10px
+                font-weight 400
+                text-align left
+
+        .listI
+            padding 10px 0
+
+            a.edit
+                position absolute
+                right 0
+                top 45px
+                text-decoration none
+                font-size 1.6em
+                padding 10px
+                color #fff
+                background rgb(136, 199, 104)
+                display block
+                font-family 'Raleway',sans-serif
+
+            ul.headList
+                list-style none
+                text-align center
+
+                li
+                    background #e5e5e5
+                    display inline-block
+                    margin 0 3px
+                    font-size 1.4em
+                    padding 5px 10px
+                    color #000
+                    font-weight 200
+    .search
+        padding 10px
+        margin 5px 0 0
+        border-top 1px solid rgb(219, 219, 219)
+        border-bottom 1px solid rgb(219, 219, 219)
+
+        input
+            display block
+            padding 4px
+            border none
+            font-size 1.4em
+            outline 0
+            vertical-align middle
+            border #e5e5e5
+            width 100%
             padding 10px
-            cursor pointer
+
+    ul.selectInvit
+        list-style none
+        background #fff
+        clearfix()
+
+        li
+            border-bottom 1px solid rgb(241, 241, 241)
+            font-size 1.4em
+            font-weight 200
+            padding 10px
+            position relative
+            clearfix()
+
+            label
+                clearfix()
+
+            .box-img
+                width 40px
+                height 40px
+                float left
+
+                img
+                    display block
+                    width 100%
+            span.name
+                text-align left
+                display block
+                float left
+                color #000
+                font-weight 200
+                padding 10px
+
+            input
+                position absolute
+                top 23px
+                right 10px
+                display block
+
+    a.invitar
+        text-decoration none
+        font-size 1.6em
+        padding 10px
+        color #fff
+        background #6dbe45
+        display block
+        font-family 'Raleway',sans-serif
+        text-align center
+
+    #close
+        position absolute
+        top 0
+        right 5px
+        color #fff
+        padding 6px
+        cursor pointer
+        font-size 2em
