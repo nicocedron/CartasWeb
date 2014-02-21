@@ -1,3 +1,11 @@
+$(document).on('ready',popUp);
+
+function popUp(){
+
+	$('#addFriends').on('click',binds.abrir);
+	$('#close').on('click',binds.cerrar);
+}
+
 /*$(document).on('ready',function(){
 	IncrementBlocks();
 	Block();
@@ -24,7 +32,6 @@ function IncrementBlocks(){
 	$('#content').append(content);
 }
 */
-
 
 function slide(){
 
@@ -95,12 +102,30 @@ function carta_expand(){
 
 $('#template_expand').slideDown();
 
-
-
-	
-
-
-
 }
+
+
+
+var binds = {
+
+	abrir:function(e){
+		e.preventDefault;
+
+		$('body').append($(
+			'<div class="mascara">'+
+			'<div class="boxAdd"><div id="close">X</div></div>'+
+			'</div>'
+			)).find('.mascara').css('height',$(window).height());
+
+	},
+
+	cerrar:function(){
+		$('.mascara').remove();
+	}
+}
+
 $(document).on('ready',ready);
 $(document).on('ready',slide);
+
+
+

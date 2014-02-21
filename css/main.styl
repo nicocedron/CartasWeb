@@ -288,24 +288,16 @@ section#content
 /* Start module section.box-content*/
 
 .box-content
-    border 1px solid #bababa
+    border 1px solid #EBEBEB
     margin 20px 0
     overflow hidden
     font-family 'Raleway',sans-serif
+    clearfix()
 
+    .colSmall
+        width 20%
+        float left
 
-    .column
-        @extend .style-inline
-        width 35%
-        vertical-align top
-
-        &:first-child
-            width 20%
-
-        &:nth-child(3)
-            width 43%
-
-    .colOne
         ul
             list-style none
 
@@ -354,321 +346,378 @@ section#content
             li
                 position relative
                 padding 7px 5px
-                border-bottom 1px solid #bababa
-                border-right 1px solid #bababa
+                border-bottom 1px solid #EBEBEB
+                border-right 1px solid #EBEBEB
 
                 .img-left
                     float left
                     width 52%
                     overflow hidden
+                    clearfix()
 
                     .box-image
                         float left
-                        margin-left 2px
+                        margin-left 1px
                         width 30px
                         height 30px
-                        @extend .style-inline
+                        
 
                         img
                             width 100%
-                            display inline-block
+                            display block
 
                 h4
                     float left
                     width 48%
-                    font-style italic
                     text-align right
                     font-family $roboto
                     font-weight 200
                     font-size 1.1em
+
+                    span
+                        display block
+
+                        &:last-child
+                            font-style italic
 
                 h2
                     font-size 1.4em
                     font-family $roboto
                     font-weight 400
                     color #2A2A2A
-
-    .colTwo
-        font-family $roboto
-        border-right 1px solid #bababa
-        padding 1% 0 0 1%
-        padding-bottom 50px
-
-        h4
-            font-size 1.4em
-            font-weight 200
-
-        h1
-            font-size 2.2em
-            margin 2.5px 0 10px
-            font-weight 400
-            color #353535
-
-        ul
-            list-style none
-
-            li
-                margin 10px 0
-
-                h3.person
-                    font-size 1.4em
-                    font-weight 500
-                    color #2C2C2D
-
-                h4
-                    font-size 1.3em
-                    font-weight 200
-
-                h5
-                    text-align center
-                    font-size 1.3em
-                    font-weight 400
-                    font-style italic
-
-                .box-carta
-                    position relative
-                    margin 7.5px 0
-
-                    .image
-                        width 200px
-                        height 90px
-                        position absolute
-                        left 0
-                        top 0
-                        bottom 0
-
-                        img
-                            display block
-                            width 100%
-                            height 90px
-
-                    .content
-                        padding-left 207px
-                        background $gris-claro
-                        height 90px
-
-                        h2
-                            font-size 1.2em
-                            font-weight 200
-                            padding 10px 0px 5px
-
-                        h3
-                            font-size 1em
-                            font-weight 200
-                            margin 3px 0
-            .acuerdo
-                span.icono
-                    font-size 3em
-                    color #666
-                    @extend .style-inline
-                    margin-right 7px
-
-                span.textoAcuerdo
-                    font-size 1.3em
-                    font-weight 200
-                    font-style italic
-                    @extend .style-inline
-
-
-    .colThree
-        position relative
-
-        >ul
-            list-style none
-            position absolute
-            top 5px
-            right 0
-
-            li
-                display block
-                margin 5px 0
-
-                a
-                    display block
-                    text-decoration none
-                    background $B2
-                    padding 10px
-                    color #fff
-                    font-size 1.2em
-
-                &:first-child
-                    a:before
-                        content "\e601"
-                        font-family "icomoon"
-                        margin-right 5px
-                        font-size 1.5em
-                        vertical-align middle
-                        color $gris-claro
-
-                &:last-child
-                    a:before
-                        content "\e603"
-                        font-family "icomoon"
-                        margin-right 5px
-                        font-size 1.5em
-                        vertical-align middle
-                        color $gris-claro
-
-        .wrapper-new
-            border 3px solid #bababa
-            display block
-            padding 9px
-            position relative
-            margin 20px 10px
-
-            &:after
-                width 0
-                height 0
-                position: absolute
-                content ""
-                border-top 10px solid transparent
-                border-right 10px solid #bababa
-                border-bottom 10px solid transparent
-                top 20px
-                left -12px
-
-            &.marginNew
-                margin 103px 10px 20px
-
-            a.exit
-                display block
-                position absolute
-                top 5px
-                right 5px
-                background $gris-claro
-                font-size 2.5em
-                color $gris-oscuro
-                text-decoration none
-                padding 5px 15px
-
-            .description
-                font-family $roboto
-                width 56%
-                @extend .style-inline
-
-                h2
-                    font-size 1.7em
-                    font-weight 300
-                    margin-bottom 7px
-                    line-height 1.3em
-                h5
-                    font-size 1.2em
-                    font-weight 200
-                h3
-                    font-size 1.4em
-                    font-weight 200
-                    margin 10px 0
-
-                .options
-                    ul
-                        list-style none
-                        margin 8px 0
-
-                        li
-                            width 15px
-                            height 15px
-                            margin 0 4px
-                            border-radius 10px
-                            background #444
-                            @extend .style-inline
-
-                h4
-                    font-size 1.4em
-                    font-weight 200
-
-                    &:before
-                        content: "\66";
-                        font-family: "icomoon";
-                        margin-right: 8px;
-                        font-size: 2em;
-                        vertical-align: middle;
-                        color: #197db6;
-            .add
-                width 43%
-                @extend .style-inline
-
-                a
-                    text-decoration: none;
-                    font-size: 1.4em;
-                    padding: 5px 10px;
-                    color: #000;
-                    background: #e5e5e5;
-                    display: block;
-                    font-family: 'Raleway',sans-serif;
-                    margin-top 40px
-
-                ul
-                    margin-top 25px
-                    list-style none
-
-                    li
-                        border-bottom 2px solid #bababa
-                        margin-bottom 10px
-                        font-size 1.3em
-                        font-weight 200
-
-                        span
-                            text-align left
-                            width 82%
-                            @extend .style-inline
-
-                        input
-                            text-align right
-                            width 15%
-
-                            @extend .style-inline
-    .content-foo
-        float right
+                    clear both
+                    padding-top 4px
+    .colLarge
         width 80%
-        padding-top 24px
-        border-top 1px solid #bababa
-        margin-top -1px
+        float left
 
-        .box-textarea
-            width 44%
+        .colChat
+            width 40%
             float left
-            position relative
+            font-family $roboto
+            border-right 1px solid #EBEBEB
+            padding-bottom 50px
+            padding-left 1%
 
-            textarea
-                width 94%
-                display block
-                border none
-                border 1px solid #bababa
-                height 100px
-                padding 5px 22px 5px 5px
-                border none
+            h4
                 font-size 1.4em
-                border 1px solid #bababa
+                font-weight 200
 
-            &:before
-                position absolute
-                top 1px
-                right 0
-                content "\e606"
-                font-family 'icomoon'
-                font-size 2em
-                color #444
-                background $gris-claro
-                border-left 1px solid #bababa
-                border-bottom 1px solid #bababa
+                &.share
+                    margin 5px 0
 
-
-        .box-icons
-            float left
-            width 56%
-            text-align center
+            h1
+                font-size 2.5em
+                margin 5px 0 10px
+                font-weight 400
+                color #353535
 
             ul
                 list-style none
-                padding 0 80px
 
                 li
-                    text-align center
-                    background #DEDEDE
-                    width 80px
-                    height 70px
-                    margin 5px
+                    margin 12px 0
+
+                    h3.person
+                        font-size 1.6em
+                        font-weight 500
+                        color #2C2C2C
+
+                    h4
+                        font-size 1.3em
+                        font-weight 200
+
+                    h5
+                        text-align center
+                        font-size 1.4em
+                        font-weight 400
+                        font-style italic
+
+                    .box-carta
+                        position relative
+                        margin 7.5px 0
+
+                        .image
+                            width 200px
+                            height 90px
+                            position absolute
+                            left 0
+                            top 0
+                            bottom 0
+
+                            img
+                                display block
+                                width 100%
+                                height 90px
+
+                        .content
+                            padding-left 207px
+                            background $gris-claro
+                            height 90px
+
+                            h2
+                                font-size 1.2em
+                                font-weight 200
+                                padding 10px 0px 5px
+
+                                strong
+                                    font-style italic
+
+                            h3
+                                font-size 1em
+                                font-weight 200
+                                margin 3px 0
+                /*.acuerdo
+                    span.icono
+                        font-size 3em
+                        color #666
+                        @extend .style-inline
+                        margin-right 7px
+                        width 30px
+
+                    span.textoAcuerdo
+                        font-size 1.4em
+                        font-weight 400
+                        font-style italic
+                        width 400px
+                        @extend .style-inline
+                */
+                .acuerdo
+                    position relative
+                    min-height 38px
+
+                    span.icono
+                        font-size 3em
+                        color #666
+                        position absolute
+                        top 0
+                        left 0
+                        display block
+
+                    span.textoAcuerdo
+                        padding-left 37px
+                        font-size 1.4em
+                        font-weight 400
+                        font-style italic
+                        display block
+
+
+        .colCard
+            width 60%
+            float left
+            position relative
+
+            >ul
+                list-style none
+                position absolute
+                top 5px
+                right 0
+
+                li
+                    display block
+                    margin 5px 0
+
+                    a
+                        display block
+                        text-decoration none
+                        background $B2
+                        padding 10px
+                        color #fff
+                        font-size 1.2em
+
+                    &:first-child
+                        a:before
+                            content "\e601"
+                            font-family "icomoon"
+                            margin-right 5px
+                            font-size 1.5em
+                            vertical-align middle
+                            color $gris-claro
+
+                    &:last-child
+                        a:before
+                            content "\e603"
+                            font-family "icomoon"
+                            margin-right 5px
+                            font-size 1.5em
+                            vertical-align middle
+                            color $gris-claro
+
+            .wrapper-new
+                border 3px solid #bababa
+                display block
+                padding 9px
+                position relative
+                margin 20px 10px
+
+                &:after
+                    width 0
+                    height 0
+                    position: absolute
+                    content ""
+                    border-top 10px solid transparent
+                    border-right 10px solid #bababa
+                    border-bottom 10px solid transparent
+                    top 20px
+                    left -12px
+
+                &.marginNew
+                    margin 103px 10px 20px
+
+                a.exit
+                    display block
+                    position absolute
+                    top 5px
+                    right 5px
+                    background $gris-claro
+                    font-size 2.5em
+                    color $gris-oscuro
+                    text-decoration none
+                    padding 5px 15px
+
+                .description
+                    font-family $roboto
+                    width 56%
                     @extend .style-inline
+
+                    h2
+                        font-size 1.7em
+                        font-weight 300
+                        margin-bottom 7px
+                        line-height 1.3em
+                    h5
+                        font-size 1.2em
+                        font-weight 200
+                    h3
+                        font-size 1.4em
+                        font-weight 200
+                        margin 10px 0
+
+                    .options
+                        ul
+                            list-style none
+                            margin 8px 0
+
+                            li
+                                width 15px
+                                height 15px
+                                margin 0 4px
+                                border-radius 10px
+                                background #444
+                                @extend .style-inline
+
+                    h4
+                        font-size 1.4em
+                        font-weight 200
+
+                        &:before
+                            content: "\66";
+                            font-family: "icomoon";
+                            margin-right: 8px;
+                            font-size: 2em;
+                            vertical-align: middle;
+                            color: #197db6;
+                .add
+                    width 43%
+                    @extend .style-inline
+
+                    a
+                        text-decoration none
+                        font-size 1.4em
+                        padding 5px 10px
+                        color #000
+                        background #e5e5e5
+                        display block
+                        font-family 'Raleway',sans-serif;
+                        margin-top 40px
+
+                    ul
+                        margin-top 25px
+                        list-style none
+
+                        li
+                            border-bottom 2px solid #bababa
+                            margin-bottom 10px
+                            font-size 1.3em
+                            font-weight 200
+
+                            span
+                                text-align left
+                                width 82%
+                                @extend .style-inline
+
+                            input
+                                text-align right
+                                width 15%
+
+                                @extend .style-inline
+        .content-foo
+            clear both
+            width 100%
+            border-top 1px solid #EBEBEB
+            border-bottom 1px solid #EBEBEB
+            clearfix()
+
+            .box-textarea
+                width 40%
+                float left
+                padding 30px 1% 0
+
+                .contentTextarea
+                    position relative
+                    width 100%
+
+                    textarea
+                        width 100%
+                        border none
+                        min-height 100px
+                        padding 5px 22px 5px 5px
+                        display block
+                        border 1px solid #EBEBEB
+                        font-size 1.4em
+
+                    &:before
+                        position absolute
+                        top 1px
+                        right 0
+                        content "\e606"
+                        font-family 'icomoon'
+                        font-size 2em
+                        color #444
+                        background #EBEBEB
+                        border-left 1px solid #EBEBEB
+                        border-bottom 1px solid #EBEBEB
+
+            .box-icons
+                float left
+                width 60%
+                text-align center
+                border-left 1px solid #EBEBEB
+                margin-left -1px
+
+                ul
+                    list-style none
+                    padding 0 80px
+
+                    li
+                        text-align center
+                        width 85px
+                        margin 10px 0
+                        cursor pointer
+                        @extend .style-inline
+
+                        span.titleIcon
+                            font-size 1.3em
+                            font-weight 200
+                            text-align center
+                            display block
+                            margin-bottom 5px
+
+                        i
+                            display block
+                            text-align center
+                            font-size 3em
+                            color #666
 
 /* End module section.box-content*/
 
@@ -913,3 +962,31 @@ section#content
                 margin-top 10px
 
 /* End module .wrapper expanded (Card) */
+
+/* Diseño mascara */
+.mascara
+    background rgb(252, 252, 252)
+    background rgba(252, 252, 252, 0.7)
+    top 0
+    left 0
+    position fixed
+    z-index 100
+    bottom 0
+    right 0
+
+    .boxAdd
+        margin 30px auto 0
+        width 500px
+        background #444
+        z-index 120
+        height 500px
+        position relative
+
+        #close
+            position absolute
+            top 0 
+            right 0
+            color #fff
+            background #FB4B4B
+            padding 10px
+            cursor pointer
