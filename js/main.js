@@ -1,7 +1,17 @@
 $(document).on('ready',popUp);
+$(window).on('load resize',height);
+
+//var _width =$('.colSmall').attr('style').replace('width:','');
+
+
+function height(){
+	$('.colSmall').hover(scroll.dentro,scroll.fuera);
+	var algo = ($('.colLarge').height()-$('.content-foo').height());
+	$('.colSmall').css('height',algo);
+	$('.contentFloat').css({'height':algo,'overflow-y':'scroll'});
+}
 
 function popUp(){
-
 	$('#addFriends').on('click',binds.abrir);
 }
 
@@ -182,9 +192,16 @@ var binds = {
 	cerrar:function(){
 		$('.mascara,.boxAdd').fadeOut('slow',function(){$(this).remove();});
 	}
-
 }
 
+var scroll = {
+	dentro:function(){
+		$('.colSmall').css('overflow-y','scroll');
+	},
+	fuera:function(){
+		$('.colSmall').css('overflow-y','');
+	}
+}
 
 
 
