@@ -5,42 +5,17 @@ $(window).on('load resize',height);
 
 
 function height(){
-	$('.colSmall').hover(scroll.dentro,scroll.fuera);
-	var algo = ($('.colLarge').height()-$('.content-foo').height());
-	$('.colSmall').css('height',algo);
-	$('.contentFloat').css({'height':algo,'overflow-y':'scroll'});
+	var altura = $(window).height() - $('header').outerHeight(true)-45;
+
+	$('.colSmall,.colLarge').css('height',altura);
+
+	$('.contentFloat').css('bottom',$('.content-foo').height());
 }
 
 function popUp(){
 	$('#addFriends').on('click',binds.abrir);
 }
 
-/*$(document).on('ready',function(){
-	IncrementBlocks();
-	Block();
-	$(window).on('resize',Block);
-	$('img').on('load',Block);
-});
-
-
-function Block(){
-
-	$('#content').BlocksIt({
-		numOfCol: Math.round($('#content').width()/294),
-		offsetX: 8,
-		offsetY: 8
-	});
-
-}
-
-//Simulate Blocks
-function IncrementBlocks(){
-	var content=$('#content').html();
-	$('#content').append(content);
-	$('#content').append(content);
-	$('#content').append(content);
-}
-*/
 
 function slide(){
 

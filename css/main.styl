@@ -298,6 +298,7 @@ section#content
     .colSmall
         width 20%
         float left
+        overflow-y scroll
 
         ul
             list-style none
@@ -394,10 +395,50 @@ section#content
         border-right 1px solid #EBEBEB
         position relative
         
+
+        >ul
+            
+            list-style none
+            position absolute
+            top 5px
+            right 10px
+            z-index 10
+            background #fff
+
+            li
+                display block
+                margin 5px 0
+
+                a
+                    display block
+                    text-decoration none
+                    background $B2
+                    padding 10px
+                    color #fff
+                    font-size 1.2em
+
+                &:first-child
+                    a:before
+                        content "\e601"
+                        font-family "icomoon"
+                        margin-right 5px
+                        font-size 1.5em
+                        vertical-align middle
+                        color $gris-claro
+
+                &:last-child
+                    a:before
+                        content "\e603"
+                        font-family "icomoon"
+                        margin-right 5px
+                        font-size 1.5em
+                        vertical-align middle
+                        color $gris-claro
         .contentFloat
             width 100%
             top 0
-            padding-bottom 142px
+            position absolute
+            overflow-y scroll
             clearfix()
 
             .colChat
@@ -516,41 +557,6 @@ section#content
                 float left
                 position relative
 
-                >ul
-                    list-style none
-                    position absolute
-                    top 5px
-                    right 0
-
-                    li
-                        display block
-                        margin 5px 0
-
-                        a
-                            display block
-                            text-decoration none
-                            background $B2
-                            padding 10px
-                            color #fff
-                            font-size 1.2em
-
-                        &:first-child
-                            a:before
-                                content "\e601"
-                                font-family "icomoon"
-                                margin-right 5px
-                                font-size 1.5em
-                                vertical-align middle
-                                color $gris-claro
-
-                        &:last-child
-                            a:before
-                                content "\e603"
-                                font-family "icomoon"
-                                margin-right 5px
-                                font-size 1.5em
-                                vertical-align middle
-                                color $gris-claro
 
                 .wrapper-new
                     border 3px solid #bababa
