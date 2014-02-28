@@ -135,10 +135,9 @@ section#content .wrapper .box-footer h3{font-size:1.1em;font-weight:200}
 .box-content .colLarge .contentFloat .colChat ul .acuerdo{position:relative;min-height:38px;}
 .box-content .colLarge .contentFloat .colChat ul .acuerdo span.icono{font-size:3em;color:#666;position:absolute;top:0;left:0;display:block}
 .box-content .colLarge .contentFloat .colChat ul .acuerdo span.textoAcuerdo{padding-left:37px;font-size:1.4em;font-weight:400;font-style:italic;display:block}
-.box-content .colLarge .contentFloat .colCard{width:57%;float:left;position:relative;}
-.box-content .colLarge .contentFloat .colCard .wrapper-new{border:3px solid #bababa;display:block;padding:9px;position:relative;margin:20px 10px;background:#fff;}
-.box-content .colLarge .contentFloat .colCard .wrapper-new:after{width:0;height:0;position:absolute;content:"";border-top:10px solid transparent;border-right:10px solid #bababa;border-bottom:10px solid transparent;top:20px;left:-12px}
-.box-content .colLarge .contentFloat .colCard .wrapper-new.marginNew{margin:103px 10px 20px}
+.box-content .colLarge .contentFloat .colCard{width:58%;float:left;position:relative;z-index:4;}
+.box-content .colLarge .contentFloat .colCard .wrapper-new{border:3px solid #bababa;display:block;padding:9px;position:relative;background:#fff;position:absolute;left:10px;width:100%;display:none;}
+.box-content .colLarge .contentFloat .colCard .wrapper-new:after{width:0;height:0;position:absolute;content:"";border-top:10px solid transparent;border-right:10px solid #bababa;border-bottom:10px solid transparent;top:30px;left:-12px}
 .box-content .colLarge .contentFloat .colCard .wrapper-new a.exit{display:block;position:absolute;top:5px;right:5px;background:#e5e5e5;font-size:2.5em;color:#bababa;text-decoration:none;padding:5px 15px}
 .box-content .colLarge .contentFloat .colCard .wrapper-new .description{font-family:'Roboto Condensed',sans-serif;width:56%;}
 .box-content .colLarge .contentFloat .colCard .wrapper-new .description h2{font-size:1.7em;font-weight:300;margin-bottom:7px;line-height:1.3em}

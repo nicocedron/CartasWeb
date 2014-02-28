@@ -1,9 +1,3 @@
-$(document).on('ready',popUp);
-$(window).on('load resize',height);
-
-//var _width =$('.colSmall').attr('style').replace('width:','');
-
-
 function height(){
 	var altura = $(window).height() - $('header').outerHeight(true)-45;
 
@@ -102,7 +96,9 @@ $(document).on('ready',ready);
 $(document).on('ready',slide);
 
 var binds = {
-
+	card:function(){
+		card.init();
+	},
 	abrir:function(e){
 		e.preventDefault();
 
@@ -189,3 +185,61 @@ var scroll = {
 
 
 
+var card={
+	template:null,
+
+	init:function(){
+
+		$('.box-carta').on('click',card.viewOne);
+		$('#viewAll').on('click',card.viewAll);
+		card.positions();
+	},
+
+	positions:function(){
+		$('.box-carta').each(function(i){
+
+			var posTop=$(this).position().top+$('.contentFloat').scrollTop()+10;
+			if(i==0) posTop-=10;
+
+			$('.wrapper-new').eq(i).css({'top':posTop,'z-index':i});
+		});	
+
+		$('.wrapper-new').off('mouseenter click',card.hover)
+			.find('.exit').off('click',card.close);
+
+		$('.wrapper-new').on('mouseenter click',card.hover)
+			.find('.exit').on('click',card.close);
+	},
+
+	viewAll:function(){
+		$('.wrapper-new').fadeIn();
+	},
+
+	viewOne:function(){
+		var index=$('.box-carta').index(this);
+
+		$('.wrapper-new').eq(index).fadeIn();
+	},
+
+	hover:function(){
+		var zindex=parseInt($(this).css('z-index'));
+		var zi=(zindex>=$('.wrapper-new').length)? zindex+1:$('.wrapper-new').length;
+		$(this).css('z-index',zi);
+	},
+
+	close:function(){
+		
+
+		$(this).parent().fadeOut();		
+	}
+
+
+
+
+}
+
+
+
+$(document).on('ready',popUp);
+$(document).on('ready',binds.card);
+$(window).on('load resize',height);

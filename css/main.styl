@@ -554,9 +554,10 @@ section#content
 
 
             .colCard
-                width 57%
+                width 58%
                 float left
                 position relative
+                z-index 4
 
 
                 .wrapper-new
@@ -564,8 +565,11 @@ section#content
                     display block
                     padding 9px
                     position relative
-                    margin 20px 10px
                     background #fff
+                    position absolute
+                    left 10px
+                    width 100%
+                    display none
 
                     &:after
                         width 0
@@ -575,11 +579,9 @@ section#content
                         border-top 10px solid transparent
                         border-right 10px solid #bababa
                         border-bottom 10px solid transparent
-                        top 20px
+                        top 30px
                         left -12px
 
-                    &.marginNew
-                        margin 103px 10px 20px
 
                     a.exit
                         display block
