@@ -202,7 +202,7 @@ var card={
 			if(i==0) posTop-=10;
 
 			$('.wrapper-new').eq(i).css({'top':posTop,'z-index':i});
-		});	
+		});
 
 		$('.wrapper-new').off('mouseenter click',card.hover)
 			.find('.exit').off('click',card.close);
@@ -212,12 +212,13 @@ var card={
 	},
 
 	viewAll:function(){
+		$('.addCard').hide();
 		$('.wrapper-new').fadeIn();
 	},
 
 	viewOne:function(){
 		var index=$('.box-carta').index(this);
-
+		$('.addCard').hide();
 		$('.wrapper-new').eq(index).fadeIn();
 	},
 
@@ -228,9 +229,12 @@ var card={
 	},
 
 	close:function(){
-		
+		$(this).parent().fadeOut(function(){
 
-		$(this).parent().fadeOut();		
+			if(!$('.wrapper-new:visible').length)
+				$('.addCard').fadeIn();
+		});
+
 	}
 
 
