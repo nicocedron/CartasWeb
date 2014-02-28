@@ -40,7 +40,8 @@ h1,h2,h3,h4,h5,h6,p,ul,li{margin:0;padding:0}
 .is-card-selected{background:#bababa !important}
 .is-seccion-active{border-bottom:2px solid #9e8e7f !important;background:#e9eae9 !important}
 .linea{width:1px;background:#bababa;height:100%;vertical-align:top}
-#container{margin:0 auto;width:100%;max-width:1408px;min-width:1000px}
+#container,.containerCard,.limit{margin:0 auto;width:100%;max-width:1408px;min-width:1000px}
+.containerCard{max-width:100%}
 #content{text-align:center;position:relative}
 html,body{height:100%}
 body{font-size:62.5%;font-family:'Open Sans',sans-serif}
@@ -107,7 +108,7 @@ section#content .wrapper .box-footer h3{font-size:1.1em;font-weight:200}
 .box-content .colSmall ul li h4 span:last-child{font-style:italic}
 .box-content .colSmall ul li h2{font-size:1.4em;font-family:'Roboto Condensed',sans-serif;font-weight:400;color:#2a2a2a;clear:both;padding-top:4px}
 .box-content .colLarge{width:80%;float:left;border-right:1px solid #ebebeb;position:relative;}
-.box-content .colLarge >ul{list-style:none;position:absolute;top:5px;right:10px;z-index:10;background:#fff;}
+.box-content .colLarge >ul{list-style:none;position:absolute;top:5px;right:15px;z-index:10;background:#fff;}
 .box-content .colLarge >ul li{display:block;margin:5px 0;}
 .box-content .colLarge >ul li a{display:block;text-decoration:none;background:#1777bd;padding:10px;color:#fff;font-size:1.2em}
 .box-content .colLarge >ul li:first-child a:before{content:"\e601";font-family:"icomoon";margin-right:5px;font-size:1.5em;vertical-align:middle;color:#e5e5e5}
@@ -168,7 +169,7 @@ section#content .wrapper .box-footer h3{font-size:1.1em;font-weight:200}
 .wrapper-expanded{border:3px solid #bababa;display:block;padding:15px 50px;position:relative;margin:20px 0;min-width:1000px;width:100%;zoom:1;}
 .wrapper-expanded:before,.wrapper-expanded:after{content:"";display:table}
 .wrapper-expanded:after{clear:both}
-.wrapper-expanded:before{width:0;height:0;position:absolute;content:"";border-left:20px solid transparent;border-right:20px solid transparent;border-bottom:20px solid #bababa;top:-22px;left:28%}
+.wrapper-expanded .arrow{width:0;height:0;position:absolute;content:"";border-left:20px solid transparent;border-right:20px solid transparent;border-bottom:20px solid #bababa;top:-22px;left:10px;-webkit-transition:left 1s;-moz-transition:left 1s;-o-transition:left 1s;-ms-transition:left 1s;transition:left 1s}
 .wrapper-expanded a.exit{display:block;position:absolute;top:5px;right:5px;background:#e5e5e5;font-size:3em;color:#bababa;text-decoration:none;padding:5px 15px}
 .wrapper-expanded #container{min-width:0;}
 .wrapper-expanded #container .box1,.wrapper-expanded #container .box2,.wrapper-expanded #container .box3{font-family:'Roboto Condensed',sans-serif;margin:0;float:left;height:255px;}

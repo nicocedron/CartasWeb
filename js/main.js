@@ -51,9 +51,10 @@ function ready(){
 function carta_expand(){
 
 	if(template==null){
-		template='</section></section><div style="display:none" id="template_expand" class="wrapper-expanded">'+$('#template_expand').html()+'</div><section id="container"><section id="content">';
+		template='<div style="display:none" id="template_expand" class="wrapper-expanded">'+$('#template_expand').html()+'</div>';
 
 	}
+	var scroll=$(window).scrollTop();
 	if($('#template_expand').length)
 		$('#template_expand').remove();
 
@@ -74,7 +75,7 @@ function carta_expand(){
 			break;
 
 	}
-
+	$('.wrapper').removeClass('is-card-selected');
 	$(this).addClass('is-card-selected');
 	insertar=(insertar*columnas);
 
@@ -84,7 +85,15 @@ function carta_expand(){
 		$('.wrapper').eq(insertar).before(template);
 
 
-$('#template_expand').slideDown();
+	$('#template_expand').slideDown().find('.arrow').css('left',($(this).offset().left+$(this).width()/2)-20)
+	.end().find('.exit').on('click',function(e){
+		e.preventDefault();
+		$('#template_expand').slideUp();
+		$('.wrapper').removeClass('is-card-selected');
+	});
+
+	$('html,body').animate({scrollTop:scroll},500);
+
 
 }
 

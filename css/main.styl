@@ -49,12 +49,13 @@ h1,h2,h3,h4,h5,h6,p,ul,li
     vertical-align top
 
 /* Contenedor */
-#container
+#container,.containerCard,.limit
     margin 0 auto
     width 100%
     max-width 1408px
     min-width 1000px
-
+.containerCard
+    max-width 100%
 #content
     text-align center
     position relative
@@ -401,7 +402,7 @@ section#content
             list-style none
             position absolute
             top 5px
-            right 10px
+            right 15px
             z-index 10
             background #fff
 
@@ -750,7 +751,7 @@ section#content
     width 100%
     clearfix()
 
-    &:before
+    .arrow
         width 0
         height 0
         position absolute
@@ -759,7 +760,8 @@ section#content
         border-right 20px solid transparent
         border-bottom 20px solid $gris-oscuro
         top -22px
-        left 28%
+        left 10px
+        transition left 1s
 
     a.exit
         display block
