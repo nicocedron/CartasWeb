@@ -309,6 +309,7 @@ section#content
                 background #6dbe45
                 padding 0
 
+
                 a
                     text-decoration: none
                     font-size 1.6em
@@ -351,6 +352,7 @@ section#content
                 padding 7px 5px
                 border-bottom 1px solid #EBEBEB
                 border-right 1px solid #EBEBEB
+                cursor pointer
 
                 .img-left
                     float left
@@ -561,6 +563,9 @@ section#content
 
                 .addCard
                     margin-top 130px
+                    width 100%
+                    top 0
+                    position absolute
 
                     >h2,>h3
                         text-align center
@@ -580,6 +585,29 @@ section#content
                             @extend section#content .wrapper
                         .wrapperNone
                             margin-right 15px
+                            .box-image
+                                position relative
+
+                                .addCard
+                                    background: none repeat scroll 0 0 #0085AA;
+                                    color: #FFFFFF;
+                                    font-family: 'Roboto Condensed',sans-serif;
+                                    font-size: 18px;
+                                    font-weight: 300;
+                                    height: 30px;
+                                    left: 50%;
+                                    margin-left: -45px;
+                                    margin-top: -10px;
+                                    padding: 3px 0;
+                                    position: absolute;
+                                    top: 50%;
+                                    width: 90px;
+                                    transition opacity 0.5s
+                                    &:hover
+                                        opacity 1 !important
+                            &:hover .box-image .addCard
+                                    opacity 0.5
+
                     >a
                         text-decoration: none;
                         font-size: 1.6em;
@@ -675,7 +703,7 @@ section#content
                         width 43%
                         @extend .style-inline
 
-                        a
+                        >a
                             text-decoration none
                             font-size 1.4em
                             padding 5px 10px
@@ -694,15 +722,24 @@ section#content
                                 margin-bottom 10px
                                 font-size 1.3em
                                 font-weight 200
+                                position relative
+                                padding 5px 0
 
                                 span
                                     text-align left
-                                    width 82%
+                                    width 95%
                                     @extend .style-inline
 
-                                input
-                                    text-align right
-                                    width 15%
+                                >a
+                                    width 20px
+                                    height 20px
+                                    background #f1f1f1
+                                    border 1px solid #dadada
+                                    position absolute
+                                    right 0
+                                    top 5px
+                                    outline none !important
+
 
                                     @extend .style-inline
         .content-foo
@@ -904,7 +941,7 @@ section#content
             //min-width 270px
             margin 0 3% 0 2%
 
-            a
+            >a
                 text-decoration none
                 font-size 1.6em
                 padding 5px 10px
@@ -925,6 +962,8 @@ section#content
                     padding-bottom 5px
                     font-size 1.4em
                     font-weight 200
+                    position relative
+                    padding 5px 0
 
                     span,input
                         display inline-block
@@ -935,9 +974,18 @@ section#content
                         text-align left
                         width 83%
 
-                     input
-                         text-align right
-                         width 15%
+                    >a
+                        width 20px
+                        height 20px
+                        background #f1f1f1
+                        border 1px solid #dadada
+                        position absolute
+                        right 0
+                        top 5px
+                        outline none !important
+
+
+                        @extend .style-inline
 
         .box3
             width 23%
@@ -1155,3 +1203,32 @@ section#content
         padding 6px
         cursor pointer
         font-size 2em
+
+
+.muyPronto
+    position fixed
+    top 0
+    bottom 0
+    left 0
+    right 0
+    z-index 9999
+    display none
+
+    .mask
+        background #fff
+        opacity 0.4
+        position absolute
+        top 0
+        bottom 0
+        left 0
+        right 0
+    .text
+        position absolute
+        font-size 42px
+        color #333
+        text-align center
+        top 50%
+        margin-top -22px
+        width 100%
+        font-family 'Roboto Condensed',sans-serif
+        font-weight 300

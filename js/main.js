@@ -87,6 +87,7 @@ function carta_expand(){
 	});
 
 	$('html,body').animate({scrollTop:scroll},500);
+	muyPronto();
 
 
 }
@@ -192,7 +193,15 @@ var card={
 
 		$('.box-carta').on('click',card.viewOne);
 		$('#viewAll').on('click',card.viewAll);
+		$('#addCard').on('click',card.add);
 		card.positions();
+
+		//$('img').on('load',card.positionsAddCard);
+		setTimeout(function(){
+			card.positionsAddCard();
+		},5000);
+		$(window).on('resize',card.positionsAddCard);
+
 	},
 
 	positions:function(){
@@ -216,6 +225,11 @@ var card={
 		$('.wrapper-new').fadeIn();
 	},
 
+	closeAll:function(){
+		$('.wrapper-new').fadeOut();
+		$('.addCard').fadeIn();
+	},
+
 	viewOne:function(){
 		var index=$('.box-carta').index(this);
 		$('.addCard').hide();
@@ -229,14 +243,47 @@ var card={
 	},
 
 	close:function(){
+
 		$(this).parent().fadeOut(function(){
 
 			if(!$('.wrapper-new:visible').length)
 				$('.addCard').fadeIn();
 		});
 
-	}
+	},
 
+	add:function(){
+		card.closeAll();
+	},
+
+	positionsAddCard:function(){
+			card.block=$('.colCard > .addCard'),
+			card._window=$('.contentFloat'),
+			card.blockHeight=card.block.outerHeight(true),
+			card._windowHeight=card._window.height();
+
+			card._window.off('scroll',card._efecto);
+			card._window.on('scroll',card._efecto);
+	
+	},
+
+	_efecto:function(){
+		if(card.block.is(':hidden'))
+			return;
+
+		var scroll 		=	$(this).scrollTop(),
+			positionTop	=	scroll-((card._windowHeight-card.blockHeight)*-1);
+
+		if((scroll+card._windowHeight)>card.blockHeight && card._windowHeight<card.blockHeight){
+			card.block.css({
+				'top':positionTop
+			});
+		}else if(card._windowHeight>card.blockHeight){
+			card.block.css({
+				'top':scroll
+			});					
+		}
+	}
 
 
 
@@ -247,3 +294,22 @@ var card={
 $(document).on('ready',popUp);
 $(document).on('ready',binds.card);
 $(window).on('load resize',height);
+
+//Mask "Muy Pronto"
+function muyPronto(){
+
+	$('.add ul li > a,.box2 ul li > a').off('click',addLayer);
+	$('.add ul li > a,.box2 ul li > a').on('click',addLayer);
+
+}
+function addLayer(e){
+		e.preventDefault();
+
+		$('body').append('<div class="muyPronto"><div class="mask"></div><div class="text">Muy Pronto</div></div>')
+		.find('.muyPronto').fadeIn(700,function(){
+			$(this).fadeOut(500,function(){
+				$(this).remove();
+			});
+		});
+}
+$(document).on('ready',muyPronto);
