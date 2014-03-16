@@ -1,8 +1,17 @@
-/*
-//Testing jquery :D
-$(document).on('ready',usual);
+$(document).on('ready',function(){
+	
+	var pages = $('.swiper-pages').swiper();
 
-function usual(){
-	$('body').css('color','#666');
-}
-*/
+	//Scroll Containers
+	$('.scroll-container').each(function(){
+		$(this).swiper({
+			mode:'vertical',
+			scrollContainer: true,
+			mousewheelControl: true,
+			scrollbar: {
+				container:$(this).find('.swiper-scrollbar')[0]
+			}
+		})
+	});
+
+});

@@ -1,3 +1,17 @@
+mixin pageContent()
+	.swiper-pages.swiper-container
+		.swiper-wrapper
+				if block
+					block
+mixin page()
+	.swiper-slide
+		.swiper-container.scroll-container
+			.swiper-scrollbar
+			.swiper-wrapper
+				.swiper-slide
+					if block
+						block
+
 doctype html
 html(lang="es")
 	head
@@ -9,8 +23,11 @@ html(lang="es")
 		link(href='http://fonts.googleapis.com/css?family=Lato:300,400|Raleway:400,300,200,600',rel='stylesheet',type='text/css')
 		link(href='css/all.css',rel='stylesheet',type='text/css')
 			
-		script(src="http://code.jquery.com/jquery-2.1.0.min.js")
+		script(src="js/jquery.js")
+		script(src="js/swiper/idangerous.swiper-2.0.min.js")
+		script(src="js/swiper/idangerous.swiper.scrollbar-2.0.js")
 		script(src="js/all.js")
 
 	body
-		block content
+		+pageContent()
+			block content
