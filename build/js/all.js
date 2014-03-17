@@ -1,6 +1,6 @@
 $(document).on('ready',function(){
 	
-	var pages = $('.swiper-pages').swiper();
+	pages = $('.swiper-pages').swiper();
 
 	//Scroll Containers
 	$('.scroll-container').each(function(){

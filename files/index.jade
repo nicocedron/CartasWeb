@@ -1,7 +1,10 @@
 extends template
 
 block content
-	+page()
-		.div Mocppasd :D sa
-	+page()
-		.div page2
+	+pageContent
+		+page
+			-for(i=0;i<2000;i++)
+				.div Line
+					b = #{i}
+		+page
+			.div page2
