@@ -1,0 +1,46 @@
+.swiper-pages
+	position absolute
+	top 45px
+	bottom 0
+	left 0
+	width 100%
+
+	>.swiper-wrapper
+		>.swiper-slide
+			position relative
+
+	.scroll-container
+		position absolute
+		top 0
+		bottom 0
+		width 100%
+
+		.swiper-wrapper, .swiper-slide
+			width 100% !important
+			height 100% !important
+
+
+.swiper-scrollbar-cursor-drag
+	cursor: move;
+
+/* Scrollbars */
+.swiper-scrollbar {
+	-ms-touch-action: none;
+	border-radius: 10px;
+	position: absolute;
+	right: 5px;
+	top: 2%;
+	width: 5px;
+	height: 96%;
+	background: rgb(0,0,0);
+	background: rgba(0,0,0,0.2);
+	z-index: 10;
+}
+.swiper-scrollbar-drag {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background: rgb(255,255,255);
+	background: rgba(255,255,255,0.5);
+	border-radius: 10px;
+}
