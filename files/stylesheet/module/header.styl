@@ -1,0 +1,24 @@
+.header
+	background $b-header
+	padding 5px
+	padding-left 40px;
+	padding-right 40px;
+
+	ul.nav
+		list-style none
+		overflow hidden
+
+		li
+			background none
+			padding 10px
+			float left
+			width 33.33%
+			font-size 1.2em
+			border-bottom 1px solid $b-header
+			text-align center
+
+			&:active,&.active
+				background $b-header-button-selected
+				border-bottom 1px solid $border-header-button-selected
+			&:active
+				border-bottom-color $b-header

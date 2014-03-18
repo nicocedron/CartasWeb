@@ -59,6 +59,9 @@ table{border-collapse:collapse;border-spacing:0}
 h1,h2,h3,h4,h5,h6,ul,li,p{margin:0;padding:0}
 html,body{height:100%}
 body{font-size:62.5%;font-family:'Raleway',sans-serif}
+.clearfix{zoom:1}
+.clearfix:before,.clearfix:after{content:"";display:table}
+.clearfix:after{clear:both}
 .swiper-pages{position:absolute;top:45px;bottom:0;left:0;width:100%;}
 .swiper-pages >.swiper-wrapper >.swiper-slide{position:relative}
 .swiper-pages .scroll-container{position:absolute;top:0;bottom:0;width:100%;}
@@ -67,3 +70,8 @@ body{font-size:62.5%;font-family:'Raleway',sans-serif}
 .swiper-scrollbar-cursor-drag{cursor:move}
 .swiper-scrollbar{-ms-touch-action:none;-webkit-border-radius:10px;border-radius:10px;position:absolute;right:5px;top:2%;width:5px;height:96%;background:#000;background:rgba(0,0,0,0.2);z-index:10}
 .swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:#fff;background:rgba(255,255,255,0.5);-webkit-border-radius:10px;border-radius:10px}
+.header{background:#e6e6e6;padding:5px;padding-left:40px;padding-right:40px;}
+.header ul.nav{list-style:none;overflow:hidden;}
+.header ul.nav li{background:none;padding:10px;float:left;width:33.33%;font-size:1.2em;border-bottom:1px solid #e6e6e6;text-align:center;}
+.header ul.nav li:active,.header ul.nav li.active{background:#d6d7d8;border-bottom:1px solid #808184}
+.header ul.nav li:active{border-bottom-color:#e6e6e6}

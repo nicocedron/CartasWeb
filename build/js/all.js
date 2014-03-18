@@ -1,6 +1,16 @@
 $(document).on('ready',function(){
 	
-	pages = $('.swiper-pages').swiper();
+	pages = $('.swiper-pages').swiper({
+		resistance:'100%',
+		onSlideChangeStart:function(slide){
+			var active=slide.activeIndex;
+			$('ul.nav li').removeClass('active').eq(active).addClass('active');
+		},
+		onTouchMove:function(a){
+			console.log(pages.positions);
+		}
+
+	});
 
 	//Scroll Containers
 	$('.scroll-container').each(function(){

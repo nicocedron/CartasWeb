@@ -1,10 +1,17 @@
 extends template
 
 block content
+	.header
+		ul.nav
+			li#descubre.active Descubre
+			li#comparte Comparte
+			li#coleciona Colecciona
 	+pageContent
 		+page
-			-for(i=0;i<2000;i++)
+			-for(i=0;i<100;i++)
 				.div Line
 					b = #{i}
 		+page
-			.div page2
+			div page 2
+		+page
+			div page 3
