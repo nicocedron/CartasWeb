@@ -1,0 +1,71 @@
+.newPlan
+	background $b-header
+	padding 0
+	text-align center
+
+	a
+		text-decoration none
+		font-size 1.4em
+		padding 10px
+		color #000
+		display block
+		border-top 1px solid #ccc
+		border-bottom 1px solid #ccc
+
+		&:after
+			content "\e605"
+			font-family "icomoon"
+			margin-left 5px
+			font-size 1.5em
+			vertical-align middle
+			color #444
+
+ul.chat
+	list-style none
+
+	li
+		position relative
+		padding 7px 5px
+		border-bottom 1px solid #EBEBEB
+		border-right 1px solid #EBEBEB
+		cursor pointer
+		
+
+		.img-left
+			float left
+			width 52%
+			overflow hidden
+			clearfix()
+
+			.box-image
+				float left
+				margin-left 1px
+				width 30px
+				height 30px
+
+
+				img
+					width 100%
+					display block
+
+		h4
+			float left
+			width 48%
+			text-align right
+			font-family $roboto
+			font-weight 200
+			font-size 1.1em
+
+			span
+				display block
+
+				&:last-child
+					font-style italic
+
+		h2
+			font-size 1.4em
+			font-family $roboto
+			font-weight 400
+			color #2A2A2A
+			clear both
+			padding-top 4px	

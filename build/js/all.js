@@ -6,14 +6,11 @@ $(document).on('ready',function(){
 			var active=slide.activeIndex;
 			$('ul.nav li').removeClass('active').eq(active).addClass('active');
 
-			$('.subheader > div').stop().fadeOut('slow',function(){
+			$('.subheader > div:visible').stop().fadeOut('fast',function(){
 				$(this).removeClass('active');
-				$('.subheader > div').hide(0).stop().eq(active).fadeIn();
+				$('.subheader > div').css('display','none').eq(active).stop().fadeIn('slow');
 			});
 
-		},
-		onTouchMove:function(a){
-			console.log(pages.positions);
 		}
 
 	});
@@ -36,6 +33,10 @@ $(document).on('ready',function(){
 		pages.swipeTo(index);
 
 
+	});
+
+	$('.filter span').on('click',function(){
+		$('.filter ul').stop().slideToggle('slow');
 	});
 
 });

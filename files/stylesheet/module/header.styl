@@ -34,11 +34,27 @@
 		position absolute
 		top 5px
 		left 5px
+		right 5px
 		display none
-		width 100%
 
 		&.active
 			display block
+
+		input.search
+			border-radius 10px
+			border none
+			background $b-input-search
+			font-size 1.2em
+			display block
+			width 100%
+			padding 5px
+			color #333
+			outline none !important
+
+			&::-webkit-input-placeholder
+				color #333
+
+
 	.descubre
 		padding 0 55px 0 65px
 
@@ -51,15 +67,33 @@
 			font-size 1.4em
 			padding 5px
 
-		input.search
-			border-radius 10px
-			border none
-			background $b-input-search
-			font-size 1.2em
-			display block
-			width 100%
-			padding 3px
-			color #333
+			ul
+				position absolute
+				top 100%
+				left 0
+				z-index 456
+				list-style none
+				background $b-header
+				padding 10px 5px 5px
+				width 185px
+				display none
 
-			&::input-placeholder,&::-webkit-input-placeholder
-				color #333
+				li
+					background $b-header-button-selected
+					margin-bottom 2px
+					border 1px solid #CCCCCC
+					padding 8px 15px
+					font-size 20px
+					text-align center
+
+		div.search
+			position absolute
+			z-index 1
+			right 10px
+			font-size 1.4em
+			color #727272
+			background #C9C9C9
+			-webkit-border-radius 3px
+			border-radius 3px
+			padding 6px 10px
+			top 0
