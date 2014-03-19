@@ -1,5 +1,6 @@
 extends template
 
+
 block content
 	.header
 		ul.nav
@@ -8,10 +9,16 @@ block content
 			li#coleciona Colecciona
 	+pageContent
 		+page
-			-for(i=0;i<100;i++)
-				.div Line
-					b = #{i}
+			.cards
+				each val in card
+					.card(class!="cat_#{val.category}")
+						.image(style!="background-image: url(#{val.image})")
+						.title #{val.title}
+							b En #{val.from}
+						.tag #{val.tag}
+						.address #{val.address}
+						.share Invitar
 		+page
-			div page 2
+			h1 Naty LINDA!!! :D
 		+page
 			div page 3

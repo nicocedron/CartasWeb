@@ -24,4 +24,10 @@ $(document).on('ready',function(){
 		})
 	});
 
+	$('ul.nav li').on('click',function(){
+		var index=$('ul.nav li').index(this);
+
+		pages.swipeTo(index);
+	});
+
 });
