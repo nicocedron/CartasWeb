@@ -7,6 +7,15 @@ block content
 			li#descubre.active Descubre
 			li#comparte Comparte
 			li#coleciona Colecciona
+
+	.subheader
+		.descubre.active
+			.filter Filtros
+			input.search(placeholder="Buscar cartas de actividad")
+
+		.comparte dd
+		.colecciona ggg
+
 	+pageContent
 		+page
 			.cards
@@ -19,6 +28,15 @@ block content
 						.address #{val.address}
 						.share Invitar
 		+page
-			h1 Naty LINDA!!! :D
+			h1 Test
+
 		+page
-			div page 3
+			.cards
+				each val in card
+					.card(class!="cat_#{val.category}")
+						.image(style!="background-image: url(#{val.image})")
+						.title #{val.title}
+							b En #{val.from}
+						.tag #{val.tag}
+						.address #{val.address}
+						.share Invitar

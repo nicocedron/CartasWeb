@@ -5,6 +5,12 @@ $(document).on('ready',function(){
 		onSlideChangeStart:function(slide){
 			var active=slide.activeIndex;
 			$('ul.nav li').removeClass('active').eq(active).addClass('active');
+
+			$('.subheader > div').stop().fadeOut('slow',function(){
+				$(this).removeClass('active');
+				$('.subheader > div').hide(0).stop().eq(active).fadeIn();
+			});
+
 		},
 		onTouchMove:function(a){
 			console.log(pages.positions);
@@ -28,6 +34,8 @@ $(document).on('ready',function(){
 		var index=$('ul.nav li').index(this);
 
 		pages.swipeTo(index);
+
+
 	});
 
 });

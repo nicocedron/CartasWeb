@@ -23,3 +23,43 @@
 
 			&:active
 				border-bottom-color $b-header-button-selected
+
+.subheader
+	background $b-subheader
+	padding 5px
+	position relative
+	height 40px
+
+	>div
+		position absolute
+		top 5px
+		left 5px
+		display none
+		width 100%
+
+		&.active
+			display block
+	.descubre
+		padding 0 55px 0 65px
+
+		.filter
+			background $b-button-filter
+			position absolute
+			left 5px
+			width 50px
+			text-align center
+			font-size 1.4em
+			padding 5px
+
+		input.search
+			border-radius 10px
+			border none
+			background $b-input-search
+			font-size 1.2em
+			display block
+			width 100%
+			padding 3px
+			color #333
+
+			&::input-placeholder,&::-webkit-input-placeholder
+				color #333
