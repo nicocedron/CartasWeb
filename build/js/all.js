@@ -16,15 +16,17 @@ $(document).on('ready',function(){
 	});
 
 	//Scroll Containers
-	$('.scroll-container').each(function(){
-		$(this).swiper({
+	var PAGE=[];
+	$('.scroll-container').each(function(i){
+		console.log(i);
+		PAGE[i]= $(this).swiper({
 			mode:'vertical',
 			scrollContainer: true,
 			mousewheelControl: true,
 			scrollbar: {
 				container:$(this).find('.swiper-scrollbar')[0]
 			}
-		})
+		});
 	});
 
 	$('ul.nav li').on('click',function(){
@@ -37,6 +39,15 @@ $(document).on('ready',function(){
 
 	$('.filter span').on('click',function(){
 		$('.filter ul').stop().slideToggle('slow');
+	});
+
+
+	$('div.search.icon-filter').on('click',function(){
+		$('#comparteList').toggle();
+		$('.filterPage').toggle();
+		
+		PAGE[0].reInit();
+		PAGE[0].resizeFix();
 	});
 
 });

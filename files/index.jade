@@ -27,7 +27,10 @@ block content
 
 	+pageContent
 		+page
-			.cards
+			.filterPage
+				include filters
+
+			.cards#comparteList
 				each val in card
 					.card(class!="cat_#{val.category}")
 						.image(style!="background-image: url(#{val.image})")
@@ -40,103 +43,7 @@ block content
 			.newPlan
 				a(href="chat.html") Iniciar nuevo plan
 			ul.chat
-				li
-						.img-left
-							.box-image
-								img(src='http://www.thewildchildren.com/wp-content/uploads/2008/07/ricardo_arjona_tour-50x50.jpg', alt='#')
-							.box-image
-								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/s48x48/1087018_160705070753108_939350680_q.jpg', alt='#')
-						h4
-							span Domingo 3:07PM
-							span 3 cartas, un evento próximo
-						h2 Ricardo, Celin, Jeniffer
-					li
-						.img-left
-							.box-image
-								img(src='http://pbs.twimg.com/profile_images/378800000590497472/b1e8cb0333a620c04cba44141a34e2b3_normal.jpeg', alt='#')
-							.box-image
-								img(src='http://images.profileengine.com/small/429080235', alt='#')
-						h4
-							span Sabado 8:00PM
-							span 3 cartas, un evento próximo
-						h2 Cristina, Carlos, Mario
-					li
-						.img-left
-							.box-image
-								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t5/s48x48/1086603_604037769674221_805703514_q.jpg', alt='#')
-							.box-image
-								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t5/s48x48/50497_286090116575_1262794_q.jpg', alt='#')
-							.box-image
-								img(src='http://pbs.twimg.com/profile_images/1795303807/spinetta-784314_normal.jpg', alt='#')
-						h4
-							span Domingo 6:50PM
-							span 2 cartas, un evento próximo
-						h2 Leonardo, Will, Spinetta
-					li
-						.img-left
-							.box-image
-								img(src='http://www.thewildchildren.com/wp-content/uploads/2008/07/ricardo_arjona_tour-50x50.jpg', alt='#')
-							.box-image
-								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/s48x48/1087018_160705070753108_939350680_q.jpg', alt='#')
-						h4
-							span Domingo 3:07PM
-							span 3 cartas, un evento próximo
-						h2 Ricardo, Celin, Jeniffer
-					li
-						.img-left
-							.box-image
-								img(src='http://pbs.twimg.com/profile_images/378800000590497472/b1e8cb0333a620c04cba44141a34e2b3_normal.jpeg', alt='#')
-							.box-image
-								img(src='http://images.profileengine.com/small/429080235', alt='#')
-						h4
-							span Sabado 8:00PM
-							span 3 cartas, un evento próximo
-						h2 Cristina, Carlos, Mario
-					li
-						.img-left
-							.box-image
-								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t5/s48x48/1086603_604037769674221_805703514_q.jpg', alt='#')
-							.box-image
-								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t5/s48x48/50497_286090116575_1262794_q.jpg', alt='#')
-							.box-image
-								img(src='http://pbs.twimg.com/profile_images/1795303807/spinetta-784314_normal.jpg', alt='#')
-						h4
-							span Domingo 6:50PM
-							span 2 cartas, un evento próximo
-						h2 Leonardo, Will, Spinetta
-					li
-						.img-left
-							.box-image
-								img(src='http://www.thewildchildren.com/wp-content/uploads/2008/07/ricardo_arjona_tour-50x50.jpg', alt='#')
-							.box-image
-								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/s48x48/1087018_160705070753108_939350680_q.jpg', alt='#')
-						h4
-							span Domingo 3:07PM
-							span 3 cartas, un evento próximo
-						h2 Ricardo, Celin, Jeniffer
-					li
-						.img-left
-							.box-image
-								img(src='http://pbs.twimg.com/profile_images/378800000590497472/b1e8cb0333a620c04cba44141a34e2b3_normal.jpeg', alt='#')
-							.box-image
-								img(src='http://images.profileengine.com/small/429080235', alt='#')
-						h4
-							span Sabado 8:00PM
-							span 3 cartas, un evento próximo
-						h2 Cristina, Carlos, Mario
-					li
-						.img-left
-							.box-image
-								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t5/s48x48/1086603_604037769674221_805703514_q.jpg', alt='#')
-							.box-image
-								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t5/s48x48/50497_286090116575_1262794_q.jpg', alt='#')
-							.box-image
-								img(src='http://pbs.twimg.com/profile_images/1795303807/spinetta-784314_normal.jpg', alt='#')
-						h4
-							span Domingo 6:50PM
-							span 2 cartas, un evento próximo
-						h2 Leonardo, Will, Spinetta
-
+				include chatPage
 
 
 		+page
