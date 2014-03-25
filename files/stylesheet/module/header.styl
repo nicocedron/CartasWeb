@@ -1,8 +1,65 @@
 .header
 	background $b-header
 	padding 5px
-	padding-left 40px;
+	padding-left 45px;
 	padding-right 40px;
+
+	.left
+		position absolute
+		left 5px
+		top 5px
+
+		.logo
+			border-radius 50%
+			background #75B8F7
+			width 35px
+			height 35px
+			padding 6px
+			font-size 19px
+			text-align center			
+			color #fff
+
+
+		.back
+			font-size 34px
+			display none
+			color #5C5C5C
+	.right
+		position absolute
+		right 0
+		top 5px
+
+		.icon
+			font-size 34px
+			color #8F8F8F
+			padding 2px 6px
+
+			&.active
+				background #808080
+
+		.menu
+			display: none;
+			width: 320px;
+			min-height: 440px;
+			background: #808080;
+			z-index: 500;
+			position absolute
+			right -0
+			top 100%
+			
+			.item,.item2
+				font-size 32px
+				color #fff
+				font-weight 300
+				padding 20px
+				border-bottom 1px solid #fff
+
+
+			.item2
+				font-size 16px
+			.separator
+				background #fff
+				height 10px
 
 	ul.nav
 		list-style none

@@ -35,7 +35,6 @@
 .cat_1
 	.image
 		border-color #A3BF3E 
-			
 .cat_2
 	.image
 		border-color #D93C29
@@ -48,3 +47,175 @@
 .cat_5
 	.image
 		border-color #C3C400
+
+
+
+.cardExpanded
+	
+	.image
+		max-height 200px
+		width 100%
+
+		img
+			width 100%
+			max-height 100%
+	h2
+		font-size 20px
+		font-weight 300
+		margin 10px 5px
+
+		b,strong
+			font-style italic
+
+	.extra
+		overflow hidden
+		padding 0 10px 
+
+		.left,.right
+			width 50%
+			float left
+			height 45px
+
+		.category
+			padding-left 50px
+			position relative
+			padding-top 17px
+
+			.cat
+				position absolute
+				left 0
+				top 0
+				width 45px
+				height 45px
+				background #e1e1e1
+				border-radius 50%
+
+		.btn
+			width: 100%;
+			border-radius: 10px;
+			background: #00B15C;
+			padding: 13px 17px;
+			color: #FFF;
+			font-size: 15px;
+			height: 45px;
+		
+	.description
+		font-size 14px
+		padding 10px 10px
+
+		&.extend
+			font-size: 12px;
+			color: #333;
+			line-height: 18px;
+
+		p
+			margin-bottom 10px
+
+	.tags
+		padding 0 10px
+		margin-bottom 10px
+		ul
+			list-style none
+			clearfix()
+
+			li
+				float: left;
+				border: 2px solid #81B3CF;
+				background: #EAF4FC;
+				margin-right: 10px;
+				color: #44F;
+				padding: 2px 5px;
+				border-radius: 10px;
+				font-size 12px
+
+	.separator
+		width 100%
+		height 1px
+		background #CECECE
+
+	.price
+		position: relative;
+		padding: 16px 10px;
+		font-size: 23px;
+		color #575757
+
+		>.right
+			position: absolute;
+			right: 10px;
+			top: 0;
+			padding-right: 45px;
+			
+			.number
+				font-weight bold
+				padding: 14px 0;
+				font-size: 30px;
+				font-style: italic;
+				font-family: Arial;	
+				color #000			
+
+			.txt
+				position: absolute;
+				right: 0;
+				top: 0;
+				font-size: 10px;
+				padding: 17px 0;
+
+
+	.data
+		padding 10px
+		font-family $lato
+		font-size 14px
+
+		.line
+			position relative
+			padding 5px 0
+
+			a
+				color #0067B8
+				font-weight bold
+				text-decoration none
+
+			.tx1
+				color #929292
+
+			.tx2
+				position absolute
+				right 0
+				top 0
+	.buttons
+		font-family $lato
+		padding: 5px 0;
+		ul
+			list-style none
+			clearfix()
+
+			li
+				width 20%
+				float left
+				text-align center
+				
+				.text
+					font-size 12px
+
+				.button
+					margin-top 5px
+					width 40px
+					height 40px
+					display inline-block
+					border-radius 50%
+					color #333
+					padding: 10px 0;
+					font-size: 20px;
+					background: #DFDFDF;					
+	.extra2
+		padding 10px
+
+		a
+			font-size 12px
+			color blue
+	.invite
+		background: #1573A8;
+		text-align: center;
+		font-size: 32px;
+		color: #FFF;
+		padding: 5px 0;
