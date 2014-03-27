@@ -1,0 +1,64 @@
+extends template
+
+
+block content
+	.header.chat
+		.left
+			.back.icon-arrow-left
+		.right
+			.icon.icon-th-menu
+
+		.title
+			span Comparte con:
+			h2 Juan Carlos B
+	.subheader
+		.chatPages
+			ul
+				li.active Chat
+				li Cartas
+				li Agregar carta
+
+		
+	+pageContent
+		+page
+			include chatList
+
+		+page
+			.cards
+				each val in card
+					.card(class!="cat_#{val.category}")
+						.image(style!="background-image: url(#{val.image})")
+						.title #{val.title}
+							b En #{val.from}
+						.tag #{val.tag}
+						.address #{val.address}
+		
+
+		+page
+			.cards
+				each val in card
+					.card(class!="cat_#{val.category}")
+						.image(style!="background-image: url(#{val.image})")
+						.title #{val.title}
+							b En #{val.from}
+						.share Agregar
+						.tag #{val.tag}
+						.address #{val.address}
+	.cardExpanded.chat
+		include cardExpanded
+
+	.footer.chat
+		.Input
+			.boxIcons
+				include boxIcons
+
+			.addIcons +
+			.boxchat
+				input(type="text")
+		.Card
+			.btn.blue.js-add Agregar
+		.View
+			.btn.js-view Ver sugerencias
+
+	script
+		$(document).on('ready',chat);

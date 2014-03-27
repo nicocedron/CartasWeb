@@ -10,10 +10,12 @@ var card={
 
 		if(!card.open)
 			return;
+		$('.footer .Card .js-invite').off('click',card.invite);
 
 		$('.subheader,#comparteList').hide();
-		$('.swiper-pages').css('top','45px');
+		$('.swiper-pages').css('top','45px').css('bottom',50);
 		$('.cardExpanded').show();
+		$('.footer,.footer .Card .btn').show();
 
 		$('.header .left .logo').hide();
 		$('.header .left .back').show()
@@ -21,10 +23,51 @@ var card={
 			.one('click',function(){
 
 				$('.subheader,#comparteList').show();
-				$('.swiper-pages').css('top','');
-				$('.cardExpanded').hide();
+				$('.swiper-pages').css('top','').css('bottom','');
+				$('.cardExpanded,.cardInvite,.footer,.footer .btn').hide();
+				$('.subheader').css('height','');
+				$('.subheader > div').css('display','none').eq(0).stop().fadeIn('slow');
 				resetPage(0);
 			});
+
+		resetPage(0);
+
+		$('.footer .Card .js-invite').on('click',card.invite);
+
+
+	},
+
+	invite:function(){
+
+		$('.cardExpanded').hide();
+		$('.cardInvite,.subheader').show();
+		$('.subheader').css('height',110);
+		$('.swiper-pages').css('top','155px');
+
+		$('.footer .Card .btn').hide();
+		$('.footer .Invite .js-invite').show();
+
+		$('.subheader .Invite .js-edit').on('click',function(){
+			if($(this).hasClass('gray'))
+				return; 
+
+			$(this).addClass('gray');
+			$('.swiper-pages').css('bottom',94);
+
+			$('.footer .Invite .js-search').show().one('click',function(){
+				$('ul.selectInvit li').show();
+
+				$('.swiper-pages').css('bottom',50);
+				$('.subheader .Invite .js-edit').removeClass('gray');
+				$(this).hide();
+
+			});
+
+			$('ul.selectInvit li input:not(:checked)').parent().parent().hide();
+		});
+
+
+		$('.subheader > div').css('display','none').eq(3).stop().fadeIn('slow');
 
 		resetPage(0);
 
@@ -115,4 +158,77 @@ function home(){
 		$(this).toggleClass('active');
 	});
 
+}
+
+
+function chat(){
+
+		$('.footer > div').hide().eq(0).show();
+		$('.swiper-pages').css('top',90).css('bottom',50);
+
+		pages = $('.swiper-pages').swiper({
+		resistance:'100%',
+		simulateTouch:SimulateTouch,
+		onTouchMove:function(){
+			card.open=false;
+		},		
+		onTouchEnd:function(){
+			setTimeout(function(){card.open=true;},500);
+		},
+		onSlideChangeStart:function(slide){
+			var active=slide.activeIndex;
+			$('ul.nav li').removeClass('active').eq(active).addClass('active');
+
+			if(active!=1){
+				$('.footer > div').hide().eq(active).show();
+				$('.swiper-pages').css('bottom',50);
+			}else{
+				$('.footer > div').hide();
+				$('.swiper-pages').css('bottom','0');
+				slide.reInit();
+			}
+
+			$('.footer .boxIcons').hide();
+
+			$('.chatPages ul li').removeClass('active').eq(active).addClass('active');
+
+		}
+
+	});
+
+	//Scroll Containers
+	PAGE=[];
+	$('.scroll-container').each(function(i){
+		
+		PAGE[i]= $(this).swiper({
+			mode:'vertical',
+			simulateTouch:SimulateTouch,
+			scrollContainer: true,
+			mousewheelControl: true,
+			onTouchMove:function(){
+				card.open=false;
+			},
+			onTouchEnd:function(){
+				setTimeout(function(){card.open=true;},500);
+			},			
+			scrollbar: {
+				container:$(this).find('.swiper-scrollbar')[0]
+			}
+		});
+	});
+
+	$('.chatPages ul li').on('click',function(){
+		var index=$('.chatPages ul li').index(this);
+
+		pages.swipeTo(index);
+
+	});
+
+	$('.footer .addIcons').on('click',function(){
+			$('.footer .boxIcons').slideToggle();
+	});
+
+	$('.header .back').on('click',function(){
+		location.href="index.html"
+	});
 }

@@ -37,6 +37,7 @@ block content
 					li Distancia
 					li Precio
 					li Disponible			
+
 			input.search(placeholder="Buscar cartas de actividad")
 			.search.icon-filter
 
@@ -44,6 +45,21 @@ block content
 			input.search(placeholder="Buscar conversaciones de planes")
 		.colecciona
 			input.search(placeholder="Buscar cartas en tus colecciones")
+
+		.Invite
+			.subtitle
+				|Invitados
+
+			.floatR.right
+				.btn.green.js-edit Editar
+
+			.listInvite
+				ul.clearfix
+					li Juan Carlos B.
+					li Carlos Campos
+					li +1
+
+			input.search(placeholder="Buscar amigos para invitar")
 
 	+pageContent
 		+page
@@ -61,131 +77,36 @@ block content
 						.address #{val.address}
 
 			.cardExpanded
-				.image
-					img(src="http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg")
-				h2 Lorem Ipsum <b>En Lorem Ipsum</b>
+				include cardExpanded
 
-				.extra		
-					.left
-						.category
-							.cat
-							|Bebidas y Comidas
-					.right
-						.btn Colecciona Carta
+			.cardInvite
+				ul.selectInvit
+					li
+						label
+							.box-img
+								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t5/s48x48/50497_286090116575_1262794_q.jpg')
+							span.name Juliana Lizarra
+							input(type='checkbox')
+					li
+						label
+							.box-img
+								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/s48x48/1087018_160705070753108_939350680_q.jpg')
+							span.name Jeniffer Madison
+							input(type='checkbox')
+					li
+						label
+							.box-img
+								img(src='http://pbs.twimg.com/profile_images/1795303807/spinetta-784314_normal.jpg')
+							span.name Daniel Guerra
+							input(type='checkbox')
+					li
+						label
+							.box-img
+								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t5/s48x48/1086603_604037769674221_805703514_q.jpg')
+							span.name Bratt Pitt
+							input(type='checkbox')
 
-				.description
-					p Es la perfecta caracteres de la de decoración casual con comida de alta calidad, un toque de audacia gastronómica a muy buen precio.
-				.tags
-					ul
-						li Francesa
-						li Americana
-						li Gourmet
-
-				.separator
-
-				.price
-					|Precio promedio
-					.right
-						.number
-							$30
-						.txt mil por<br/> persona
-				.separator
-
-				.data
-					.line
-						.tx1 Telefono
-						.tx2 (000) 14857-4123
-					.line
-						.tx1 Direccion
-						.tx2 Carrera 6 # 119-24 2
-
-					.line
-						.tx1 Barrio
-						.tx2 Usaquen
-					.line
-						.tx1 Sitio Web
-						.tx2
-							a(href="#") Ir al sitio web
-
-				.separator
-
-				.buttons
-					ul
-						li
-							.text Precios
-							.button.icon-film
-								
-						li
-							.text Menús
-							.button.icon-film
-								
-						li
-							.text Mapa
-							.button.icon-film
-								
-						li
-							.text Transporte
-							.button.icon-film
-								
-						li
-							.text Críticas
-							.button.icon-film
-
-				.separator
-
-				.buttons
-					ul
-						li
-							.text Precios
-							.button.icon-film
-								
-						li
-							.text Menús
-							.button.icon-film
-								
-						li
-							.text Mapa
-							.button.icon-film
-								
-						li
-							.text Transporte
-							.button.icon-film
-								
-						li
-							.text Críticas
-							.button.icon-film
-
-				.separator
-
-				.description.extend
-					p
-						|As, Bistronomy cuenta con un tablero de platos del día, unos
-						|precios asequibles y una invitación a un público familiar, que
-						|podrá compartir, en su mayoría, platos de la cocina francesa y
-						|estadounidense, así como algunas especialidades internacionales
-						|que han ido cautivando a los Rausch en sus viajes.
-					p
-						|Entre los platos clásicos franceses están el coq au vin
-						|(medio pollo estofado en salsa de vino tinto con guarnición
-						|de tocineta, champiñones y cebollitas, por 26.000 pesos) y
-						|el cassoulet (cocido francés con fríjoles blancos, confit de pato,
-						|salchicha Toulouse, cerdo y cordero, por 34.900 pesos).
-					p
-						|Estas dos preparaciones conviven en la carta con el pollo frito,
-						|las hamburguesas, un sándwiche de sobrebarriga con huevo frito
-						|y las recetas de las abuelas Rausch. Lo mismo pasa con las
-						|entradas y los postres, en los que los clásicos peach melba y
-						|tiramisú se alternan con una sencilla paleta de agua.
-
-				.separator
-
-				.extra2
-					a(href="#") Editar carta/Sugerir modificación
-
-				.separator
-
-				.invite Invitar
-
+				
 		+page
 			.newPlan
 				a(href="chat.html") Iniciar nuevo plan
@@ -204,6 +125,13 @@ block content
 						.tag #{val.tag}
 						.address #{val.address}
 		
+	.footer
+		.Invite
+			.btn.js-search Buscar mas amigos
+			.btn.blue.js-invite Invitar
+
+		.Card
+			.btn.blue.js-invite Invitar
 
 	script
 		$(document).on('ready',home);

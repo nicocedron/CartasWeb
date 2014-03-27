@@ -13,60 +13,24 @@
     <script src="js/all.js"></script>
   </head>
   <body>
-    <div class="header">
+    <div class="header chat">
       <div class="left">
-        <div class="logo">C</div>
         <div class="back icon-arrow-left"></div>
       </div>
       <div class="right">
         <div class="icon icon-th-menu"></div>
-        <div class="menu">
-          <div class="item"><a>Descubre</a></div>
-          <div class="item"><a>Comparte</a></div>
-          <div class="item"><a>Colecciona</a></div>
-          <div class="separator"></div>
-          <div class="item2"><a>Comentarios sobre la aplicacion</a></div>
-          <div class="item2"><a>Logout</a></div>
-        </div>
       </div>
-      <ul class="nav">
-        <li id="descubre" class="active">Descubre</li>
-        <li id="comparte">Comparte</li>
-        <li id="coleciona">Colecciona</li>
-      </ul>
+      <div class="title"><span>Comparte con:</span>
+        <h2>Juan Carlos B</h2>
+      </div>
     </div>
     <div class="subheader">
-      <div class="descubre active">
-        <div class="filter"><span>Filtros</span>
-          <ul>
-            <li>Rating</li>
-            <li>Distancia</li>
-            <li>Precio</li>
-            <li>Disponible			</li>
-          </ul>
-        </div>
-        <input placeholder="Buscar cartas de actividad" class="search">
-        <div class="search icon-filter"></div>
-      </div>
-      <div class="comparte">
-        <input placeholder="Buscar conversaciones de planes" class="search">
-      </div>
-      <div class="colecciona">
-        <input placeholder="Buscar cartas en tus colecciones" class="search">
-      </div>
-      <div class="Invite">
-        <div class="subtitle">Invitados</div>
-        <div class="floatR right">
-          <div class="btn green js-edit">Editar</div>
-        </div>
-        <div class="listInvite">
-          <ul class="clearfix">
-            <li>Juan Carlos B.</li>
-            <li>Carlos Campos</li>
-            <li>+1</li>
-          </ul>
-        </div>
-        <input placeholder="Buscar amigos para invitar" class="search">
+      <div class="chatPages">
+        <ul>
+          <li class="active">Chat</li>
+          <li>Cartas</li>
+          <li>Agregar carta</li>
+        </ul>
       </div>
     </div>
     <div class="swiper-pages swiper-container">
@@ -76,421 +40,74 @@
             <div class="swiper-scrollbar"></div>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="filterPage">
-                  <div class="boxSlide L1">
-                    <h3>Descubre por categoría</h3>
-                    <ul>
-                      <li><a href="#"><span class="color cat1"></span><span class="text">Comer y beber</span></a></li>
-                      <li><a href="#"><span class="color cat2"></span><span class="text">Cultura</span></a></li>
-                      <li><a href="#"><span class="color cat3"></span><span class="text">Deportes</span></a></li>
-                      <li><a href="#"><span class="color cat4"></span><span class="text">Diversión</span></a></li>
-                      <li><a href="#"><span class="color cat5"></span><span class="text">Noche</span></a></li>
-                      <li><a href="#"><span class="color cat6"></span><span class="text">Social</span></a></li>
-                      <li><a href="#"><span class="color cat7"></span><span class="text">Casero</span></a></li>
-                    </ul>
-                  </div>
-                  <div class="boxSlide L2">
-                    <h3>Descubre por fecha</h3>
-                    <ul>
-                      <li><a href="#"><span class="color B1"></span><span class="text">Hoy</span></a></li>
-                      <li><a href="#"><span class="color B2"></span><span class="text">Mañana</span></a></li>
-                      <li><a href="#"><span class="color B3"></span><span class="text">Despúes</span></a></li>
-                    </ul>
-                  </div>
-                  <div class="boxSlide L3">
-                    <h3>Descubre por otros</h3>
-                    <ul>
-                      <li><a href="#"><span class="color icon-user"></span><span class="text">Recomendaciones de amigos</span></a></li>
-                      <li><a href="#"><span class="color B2"></span><span class="text">Barajas suscritas</span></a></li>
-                      <li><a href="#"><span class="color B3"></span><span class="text">Lo mejor de la zona</span></a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div id="comparteList" class="cards">
-                  <div class="card cat_1">
-                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
-                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Pastelería francésa</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_2">
-                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
-                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Restaurante de comida americana</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_3">
-                    <div style="background-image: url(http://www.almamaterradio.com/wp-content/uploads/2012/09/Comida-de-resutaurante.jpg)" class="image"></div>
-                    <div class="title">Comida Szechuan y cocteles<b>En Kong</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Testing Tags</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_4">
-                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
-                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Pastelería francésa</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_5">
-                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
-                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Restaurante de comida americana</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_1">
-                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
-                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Pastelería francésa</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_2">
-                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
-                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Restaurante de comida americana</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_3">
-                    <div style="background-image: url(http://www.almamaterradio.com/wp-content/uploads/2012/09/Comida-de-resutaurante.jpg)" class="image"></div>
-                    <div class="title">Comida Szechuan y cocteles<b>En Kong</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Testing Tags</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_4">
-                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
-                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Pastelería francésa</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_5">
-                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
-                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Restaurante de comida americana</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_1">
-                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
-                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Pastelería francésa</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_2">
-                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
-                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Restaurante de comida americana</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_3">
-                    <div style="background-image: url(http://www.almamaterradio.com/wp-content/uploads/2012/09/Comida-de-resutaurante.jpg)" class="image"></div>
-                    <div class="title">Comida Szechuan y cocteles<b>En Kong</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Testing Tags</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_4">
-                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
-                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Pastelería francésa</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_5">
-                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
-                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Restaurante de comida americana</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_1">
-                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
-                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Pastelería francésa</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_2">
-                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
-                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Restaurante de comida americana</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_3">
-                    <div style="background-image: url(http://www.almamaterradio.com/wp-content/uploads/2012/09/Comida-de-resutaurante.jpg)" class="image"></div>
-                    <div class="title">Comida Szechuan y cocteles<b>En Kong</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Testing Tags</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_4">
-                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
-                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Pastelería francésa</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                  <div class="card cat_5">
-                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
-                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
-                    <div class="tag">Restaurante de comida americana</div>
-                    <div class="address">Calle 70 # 6-37, Bogotá</div>
-                  </div>
-                </div>
-                <div class="cardExpanded">
-                  <div class="image"><img src="http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg"></div>
-                  <h2>Lorem Ipsum <b>En Lorem Ipsum</b></h2>
-                  <div class="extra">		
-                    <div class="left">
-                      <div class="category">
-                        <div class="cat"></div>Bebidas y Comidas
+                <div class="colChat">
+                  <h4 class="share">Comparte con:</h4>
+                  <h1>Alejandro, Camilo y daniel</h1>
+                  <ul>
+                    <li>
+                      <h3 class="person">Alejandro Sanchez</h3>
+                      <h4>Yo propongo que vamos a almorzar a Creppes</h4>
+                      <div class="box-carta">
+                        <div class="image"><img src="http://www.dw.de/image/0,,16668429_303,00.jpg" alt="#"></div>
+                        <div class="content">
+                          <h2>Crepes para deleitar en<strong>Crepes & waffles</strong></h2>
+                          <h3>Restaurante Frances, choppes y manzanares</h3>
+                          <h3>Zona zur - Bogota</h3>
+                        </div>
                       </div>
-                    </div>
-                    <div class="right">
-                      <div class="btn">Colecciona Carta</div>
-                    </div>
-                  </div>
-                  <div class="description">
-                    <p>Es la perfecta caracteres de la de decoración casual con comida de alta calidad, un toque de audacia gastronómica a muy buen precio.</p>
-                  </div>
-                  <div class="tags">
-                    <ul>
-                      <li>Francesa</li>
-                      <li>Americana</li>
-                      <li>Gourmet</li>
-                    </ul>
-                  </div>
-                  <div class="separator"></div>
-                  <div class="price">Precio promedio
-                    <div class="right">
-                      <div class="number">$30</div>
-                      <div class="txt">mil por<br/> persona</div>
-                    </div>
-                  </div>
-                  <div class="separator"></div>
-                  <div class="data">
-                    <div class="line">
-                      <div class="tx1">Telefono</div>
-                      <div class="tx2">(000) 14857-4123</div>
-                    </div>
-                    <div class="line">
-                      <div class="tx1">Direccion</div>
-                      <div class="tx2">Carrera 6 # 119-24 2</div>
-                    </div>
-                    <div class="line">
-                      <div class="tx1">Barrio</div>
-                      <div class="tx2">Usaquen</div>
-                    </div>
-                    <div class="line">
-                      <div class="tx1">Sitio Web</div>
-                      <div class="tx2"><a href="#">Ir al sitio web</a></div>
-                    </div>
-                  </div>
-                  <div class="separator"></div>
-                  <div class="buttons">
-                    <ul>
-                      <li>
-                        <div class="text">Precios</div>
-                        <div class="button icon-film"></div>
-                      </li>
-                      <li>
-                        <div class="text">Menús</div>
-                        <div class="button icon-film"></div>
-                      </li>
-                      <li>
-                        <div class="text">Mapa</div>
-                        <div class="button icon-film"></div>
-                      </li>
-                      <li>
-                        <div class="text">Transporte</div>
-                        <div class="button icon-film"></div>
-                      </li>
-                      <li>
-                        <div class="text">Críticas</div>
-                        <div class="button icon-film"></div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="separator"></div>
-                  <div class="buttons">
-                    <ul>
-                      <li>
-                        <div class="text">Precios</div>
-                        <div class="button icon-film"></div>
-                      </li>
-                      <li>
-                        <div class="text">Menús</div>
-                        <div class="button icon-film"></div>
-                      </li>
-                      <li>
-                        <div class="text">Mapa</div>
-                        <div class="button icon-film"></div>
-                      </li>
-                      <li>
-                        <div class="text">Transporte</div>
-                        <div class="button icon-film"></div>
-                      </li>
-                      <li>
-                        <div class="text">Críticas</div>
-                        <div class="button icon-film"></div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="separator"></div>
-                  <div class="description extend">
-                    <p>
-                      As, Bistronomy cuenta con un tablero de platos del día, unos
-                      precios asequibles y una invitación a un público familiar, que
-                      podrá compartir, en su mayoría, platos de la cocina francesa y
-                      estadounidense, así como algunas especialidades internacionales
-                      que han ido cautivando a los Rausch en sus viajes.
-                    </p>
-                    <p>
-                      Entre los platos clásicos franceses están el coq au vin
-                      (medio pollo estofado en salsa de vino tinto con guarnición
-                      de tocineta, champiñones y cebollitas, por 26.000 pesos) y
-                      el cassoulet (cocido francés con fríjoles blancos, confit de pato,
-                      salchicha Toulouse, cerdo y cordero, por 34.900 pesos).
-                    </p>
-                    <p>
-                      Estas dos preparaciones conviven en la carta con el pollo frito,
-                      las hamburguesas, un sándwiche de sobrebarriga con huevo frito
-                      y las recetas de las abuelas Rausch. Lo mismo pasa con las
-                      entradas y los postres, en los que los clásicos peach melba y
-                      tiramisú se alternan con una sencilla paleta de agua.
-                    </p>
-                  </div>
-                  <div class="separator"></div>
-                  <div class="extra2"><a href="#">Editar carta/Sugerir modificación</a></div>
-                  <div class="separator"></div>
-                  <!--.invite Invitar-->
-                </div>
-                <div class="cardInvite">
-                  <ul class="selectInvit">
-                    <li>
-                      <label>
-                        <div class="box-img"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t5/s48x48/50497_286090116575_1262794_q.jpg"></div><span class="name">Juliana Lizarra</span>
-                        <input type="checkbox">
-                      </label>
                     </li>
                     <li>
-                      <label>
-                        <div class="box-img"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/s48x48/1087018_160705070753108_939350680_q.jpg"></div><span class="name">Jeniffer Madison</span>
-                        <input type="checkbox">
-                      </label>
+                      <h3 class="person">Alejandro Sanchez</h3>
+                      <h4>Listo, por qu no agregamos a Daniel?</h4>
+                      <h5>Camilo invito a Daniel</h5>
                     </li>
                     <li>
-                      <label>
-                        <div class="box-img"><img src="http://pbs.twimg.com/profile_images/1795303807/spinetta-784314_normal.jpg"></div><span class="name">Daniel Guerra</span>
-                        <input type="checkbox">
-                      </label>
+                      <h3 class="person">Daniel Murcia</h3>
+                      <h4>Me parece bueno el plan, aunque les propongo algo mejor</h4>
+                      <h4>Me parece bueno el plan, aunque les propongo algo mejor</h4>
+                      <h4>Me parece bueno el plan, aunque les propongo algo mejor</h4>
                     </li>
                     <li>
-                      <label>
-                        <div class="box-img"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t5/s48x48/1086603_604037769674221_805703514_q.jpg"></div><span class="name">Bratt Pitt</span>
-                        <input type="checkbox">
-                      </label>
+                      <h3 class="person">Daniel Murcia</h3>
+                      <div class="box-carta">
+                        <div class="image"><img src="http://static.freepik.com/foto-gratis/fideos--bebidas-alimentacion--comida-rapida--comida_3204341.jpg" alt="#"></div>
+                        <div class="content">
+                          <h2>Alitas y cerveza en<strong>The beer</strong></h2>
+                          <h3>Pub, cerveza</h3>
+                          <h3>Bogota 300</h3>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <h3 class="person">Alejandro Sanchez</h3>
+                      <h4>Me suena, yo puedo esta noche</h4>
+                    </li>
+                    <li>
+                      <h3 class="person">Camilo</h3>
+                      <h4>Hagamos eso</h4>
+                    </li>
+                    <li>
+                      <div class="acuerdo"><span class="icono icon-uniE602"></span><span class="textoAcuerdo">Alejandro, Daniel y jerardo acordaron en la agenda the beer Lounge hoy a las 8PM</span></div>
+                    </li>
+                    <li>
+                      <h3 class="person">Carlos Campo</h3>
+                      <h4>Perfecto, asi quedamos</h4>
+                    </li>
+                    <li>
+                      <div class="acuerdo"><span class="icono icon-uniE607"></span><span class="textoAcuerdo">Carlos pasó un evento a su calendario hoy a las 8PM</span></div>
+                      <div class="box-carta">
+                        <div class="image"><img src="http://static.freepik.com/foto-gratis/fideos--bebidas-alimentacion--comida-rapida--comida_3204341.jpg" alt="#"></div>
+                        <div class="content">
+                          <h2>Alitas y cerveza en<strong>The beer</strong></h2>
+                          <h3>Pub, cerveza</h3>
+                          <h3>Bogota 300</h3>
+                        </div>
+                      </div>
+                      <h3 class="person">Camilo</h3>
+                      <h4>Hagamos eso</h4>
                     </li>
                   </ul>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="swiper-container scroll-container">
-            <div class="swiper-scrollbar"></div>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="newPlan"><a href="chat.html">Iniciar nuevo plan</a></div>
-                <ul class="chat">
-                  <li>
-                    <div class="img-left">
-                      <div class="box-image"><img src="http://www.thewildchildren.com/wp-content/uploads/2008/07/ricardo_arjona_tour-50x50.jpg" alt="#"></div>
-                      <div class="box-image"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/s48x48/1087018_160705070753108_939350680_q.jpg" alt="#"></div>
-                    </div>
-                    <h4><span>Domingo 3:07PM</span><span>3 cartas, un evento próximo</span></h4>
-                    <h2>Ricardo, Celin, Jeniffer</h2>
-                  </li>
-                  <li>
-                    <div class="img-left">
-                      <div class="box-image"><img src="http://pbs.twimg.com/profile_images/378800000590497472/b1e8cb0333a620c04cba44141a34e2b3_normal.jpeg" alt="#"></div>
-                      <div class="box-image"><img src="http://images.profileengine.com/small/429080235" alt="#"></div>
-                    </div>
-                    <h4><span>Sabado 8:00PM</span><span>3 cartas, un evento próximo</span></h4>
-                    <h2>Cristina, Carlos, Mario</h2>
-                  </li>
-                  <li>
-                    <div class="img-left">
-                      <div class="box-image"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t5/s48x48/1086603_604037769674221_805703514_q.jpg" alt="#"></div>
-                      <div class="box-image"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t5/s48x48/50497_286090116575_1262794_q.jpg" alt="#"></div>
-                      <div class="box-image"><img src="http://pbs.twimg.com/profile_images/1795303807/spinetta-784314_normal.jpg" alt="#"></div>
-                    </div>
-                    <h4><span>Domingo 6:50PM</span><span>2 cartas, un evento próximo</span></h4>
-                    <h2>Leonardo, Will, Spinetta</h2>
-                  </li>
-                  <li>
-                    <div class="img-left">
-                      <div class="box-image"><img src="http://www.thewildchildren.com/wp-content/uploads/2008/07/ricardo_arjona_tour-50x50.jpg" alt="#"></div>
-                      <div class="box-image"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/s48x48/1087018_160705070753108_939350680_q.jpg" alt="#"></div>
-                    </div>
-                    <h4><span>Domingo 3:07PM</span><span>3 cartas, un evento próximo</span></h4>
-                    <h2>Ricardo, Celin, Jeniffer</h2>
-                  </li>
-                  <li>
-                    <div class="img-left">
-                      <div class="box-image"><img src="http://pbs.twimg.com/profile_images/378800000590497472/b1e8cb0333a620c04cba44141a34e2b3_normal.jpeg" alt="#"></div>
-                      <div class="box-image"><img src="http://images.profileengine.com/small/429080235" alt="#"></div>
-                    </div>
-                    <h4><span>Sabado 8:00PM</span><span>3 cartas, un evento próximo</span></h4>
-                    <h2>Cristina, Carlos, Mario</h2>
-                  </li>
-                  <li>
-                    <div class="img-left">
-                      <div class="box-image"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t5/s48x48/1086603_604037769674221_805703514_q.jpg" alt="#"></div>
-                      <div class="box-image"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t5/s48x48/50497_286090116575_1262794_q.jpg" alt="#"></div>
-                      <div class="box-image"><img src="http://pbs.twimg.com/profile_images/1795303807/spinetta-784314_normal.jpg" alt="#"></div>
-                    </div>
-                    <h4><span>Domingo 6:50PM</span><span>2 cartas, un evento próximo</span></h4>
-                    <h2>Leonardo, Will, Spinetta</h2>
-                  </li>
-                  <li>
-                    <div class="img-left">
-                      <div class="box-image"><img src="http://www.thewildchildren.com/wp-content/uploads/2008/07/ricardo_arjona_tour-50x50.jpg" alt="#"></div>
-                      <div class="box-image"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/s48x48/1087018_160705070753108_939350680_q.jpg" alt="#"></div>
-                    </div>
-                    <h4><span>Domingo 3:07PM</span><span>3 cartas, un evento próximo</span></h4>
-                    <h2>Ricardo, Celin, Jeniffer</h2>
-                  </li>
-                  <li>
-                    <div class="img-left">
-                      <div class="box-image"><img src="http://pbs.twimg.com/profile_images/378800000590497472/b1e8cb0333a620c04cba44141a34e2b3_normal.jpeg" alt="#"></div>
-                      <div class="box-image"><img src="http://images.profileengine.com/small/429080235" alt="#"></div>
-                    </div>
-                    <h4><span>Sabado 8:00PM</span><span>3 cartas, un evento próximo</span></h4>
-                    <h2>Cristina, Carlos, Mario</h2>
-                  </li>
-                  <li>
-                    <div class="img-left">
-                      <div class="box-image"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t5/s48x48/1086603_604037769674221_805703514_q.jpg" alt="#"></div>
-                      <div class="box-image"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t5/s48x48/50497_286090116575_1262794_q.jpg" alt="#"></div>
-                      <div class="box-image"><img src="http://pbs.twimg.com/profile_images/1795303807/spinetta-784314_normal.jpg" alt="#"></div>
-                    </div>
-                    <h4><span>Domingo 6:50PM</span><span>2 cartas, un evento próximo</span></h4>
-                    <h2>Leonardo, Will, Spinetta</h2>
-                  </li>
-                </ul>
               </div>
             </div>
           </div>
@@ -504,140 +121,271 @@
                   <div class="card cat_1">
                     <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
                     <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Pastelería francésa</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_2">
                     <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
                     <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Restaurante de comida americana</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_3">
                     <div style="background-image: url(http://www.almamaterradio.com/wp-content/uploads/2012/09/Comida-de-resutaurante.jpg)" class="image"></div>
                     <div class="title">Comida Szechuan y cocteles<b>En Kong</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Testing Tags</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_4">
                     <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
                     <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Pastelería francésa</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_5">
                     <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
                     <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Restaurante de comida americana</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_1">
                     <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
                     <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Pastelería francésa</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_2">
                     <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
                     <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Restaurante de comida americana</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_3">
                     <div style="background-image: url(http://www.almamaterradio.com/wp-content/uploads/2012/09/Comida-de-resutaurante.jpg)" class="image"></div>
                     <div class="title">Comida Szechuan y cocteles<b>En Kong</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Testing Tags</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_4">
                     <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
                     <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Pastelería francésa</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_5">
                     <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
                     <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Restaurante de comida americana</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_1">
                     <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
                     <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Pastelería francésa</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_2">
                     <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
                     <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Restaurante de comida americana</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_3">
                     <div style="background-image: url(http://www.almamaterradio.com/wp-content/uploads/2012/09/Comida-de-resutaurante.jpg)" class="image"></div>
                     <div class="title">Comida Szechuan y cocteles<b>En Kong</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Testing Tags</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_4">
                     <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
                     <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Pastelería francésa</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_5">
                     <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
                     <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Restaurante de comida americana</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_1">
                     <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
                     <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Pastelería francésa</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_2">
                     <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
                     <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Restaurante de comida americana</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_3">
                     <div style="background-image: url(http://www.almamaterradio.com/wp-content/uploads/2012/09/Comida-de-resutaurante.jpg)" class="image"></div>
                     <div class="title">Comida Szechuan y cocteles<b>En Kong</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Testing Tags</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_4">
                     <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
                     <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
-                    <div class="share">Invitar</div>
                     <div class="tag">Pastelería francésa</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
                   <div class="card cat_5">
                     <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
                     <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
-                    <div class="share">Invitar</div>
+                    <div class="tag">Restaurante de comida americana</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-container scroll-container">
+            <div class="swiper-scrollbar"></div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="cards">
+                  <div class="card cat_1">
+                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
+                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Pastelería francésa</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_2">
+                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
+                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Restaurante de comida americana</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_3">
+                    <div style="background-image: url(http://www.almamaterradio.com/wp-content/uploads/2012/09/Comida-de-resutaurante.jpg)" class="image"></div>
+                    <div class="title">Comida Szechuan y cocteles<b>En Kong</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Testing Tags</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_4">
+                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
+                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Pastelería francésa</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_5">
+                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
+                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Restaurante de comida americana</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_1">
+                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
+                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Pastelería francésa</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_2">
+                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
+                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Restaurante de comida americana</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_3">
+                    <div style="background-image: url(http://www.almamaterradio.com/wp-content/uploads/2012/09/Comida-de-resutaurante.jpg)" class="image"></div>
+                    <div class="title">Comida Szechuan y cocteles<b>En Kong</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Testing Tags</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_4">
+                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
+                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Pastelería francésa</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_5">
+                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
+                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Restaurante de comida americana</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_1">
+                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
+                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Pastelería francésa</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_2">
+                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
+                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Restaurante de comida americana</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_3">
+                    <div style="background-image: url(http://www.almamaterradio.com/wp-content/uploads/2012/09/Comida-de-resutaurante.jpg)" class="image"></div>
+                    <div class="title">Comida Szechuan y cocteles<b>En Kong</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Testing Tags</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_4">
+                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
+                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Pastelería francésa</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_5">
+                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
+                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Restaurante de comida americana</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_1">
+                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
+                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Pastelería francésa</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_2">
+                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
+                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Restaurante de comida americana</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_3">
+                    <div style="background-image: url(http://www.almamaterradio.com/wp-content/uploads/2012/09/Comida-de-resutaurante.jpg)" class="image"></div>
+                    <div class="title">Comida Szechuan y cocteles<b>En Kong</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Testing Tags</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_4">
+                    <div style="background-image: url(http://2.bp.blogspot.com/-a1-wxkNCoNk/T9usVxnEiEI/AAAAAAAADM0/IX6wVqd4B_Y/s1600/restaurantes+viajes+y+turismo.jpg)" class="image"></div>
+                    <div class="title">Mousse de tres chocolates<b>En Rausch Pâtissier</b></div>
+                    <div class="share">Agregar</div>
+                    <div class="tag">Pastelería francésa</div>
+                    <div class="address">Calle 70 # 6-37, Bogotá</div>
+                  </div>
+                  <div class="card cat_5">
+                    <div style="background-image: url(http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg)" class="image"></div>
+                    <div class="title">Hamburguesas y otros sabores<b>En El Corral Gourmet</b></div>
+                    <div class="share">Agregar</div>
                     <div class="tag">Restaurante de comida americana</div>
                     <div class="address">Calle 70 # 6-37, Bogotá</div>
                   </div>
@@ -648,15 +396,162 @@
         </div>
       </div>
     </div>
-    <div class="footer">
-      <div class="Invite">
-        <div class="btn js-search">Buscar mas amigos</div>
-        <div class="btn blue js-invite">Invitar</div>
+    <div class="cardExpanded chat">
+      <div class="image"><img src="http://recetasdecocinablog.com/wp-content/uploads/2011/02/comida_de_restaurante_chino2.jpg"></div>
+      <h2>Lorem Ipsum <b>En Lorem Ipsum</b></h2>
+      <div class="extra">		
+        <div class="left">
+          <div class="category">
+            <div class="cat"></div>Bebidas y Comidas
+          </div>
+        </div>
+        <div class="right">
+          <div class="btn">Colecciona Carta</div>
+        </div>
+      </div>
+      <div class="description">
+        <p>Es la perfecta caracteres de la de decoración casual con comida de alta calidad, un toque de audacia gastronómica a muy buen precio.</p>
+      </div>
+      <div class="tags">
+        <ul>
+          <li>Francesa</li>
+          <li>Americana</li>
+          <li>Gourmet</li>
+        </ul>
+      </div>
+      <div class="separator"></div>
+      <div class="price">Precio promedio
+        <div class="right">
+          <div class="number">$30</div>
+          <div class="txt">mil por<br/> persona</div>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="data">
+        <div class="line">
+          <div class="tx1">Telefono</div>
+          <div class="tx2">(000) 14857-4123</div>
+        </div>
+        <div class="line">
+          <div class="tx1">Direccion</div>
+          <div class="tx2">Carrera 6 # 119-24 2</div>
+        </div>
+        <div class="line">
+          <div class="tx1">Barrio</div>
+          <div class="tx2">Usaquen</div>
+        </div>
+        <div class="line">
+          <div class="tx1">Sitio Web</div>
+          <div class="tx2"><a href="#">Ir al sitio web</a></div>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="buttons">
+        <ul>
+          <li>
+            <div class="text">Precios</div>
+            <div class="button icon-film"></div>
+          </li>
+          <li>
+            <div class="text">Menús</div>
+            <div class="button icon-film"></div>
+          </li>
+          <li>
+            <div class="text">Mapa</div>
+            <div class="button icon-film"></div>
+          </li>
+          <li>
+            <div class="text">Transporte</div>
+            <div class="button icon-film"></div>
+          </li>
+          <li>
+            <div class="text">Críticas</div>
+            <div class="button icon-film"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="separator"></div>
+      <div class="buttons">
+        <ul>
+          <li>
+            <div class="text">Precios</div>
+            <div class="button icon-film"></div>
+          </li>
+          <li>
+            <div class="text">Menús</div>
+            <div class="button icon-film"></div>
+          </li>
+          <li>
+            <div class="text">Mapa</div>
+            <div class="button icon-film"></div>
+          </li>
+          <li>
+            <div class="text">Transporte</div>
+            <div class="button icon-film"></div>
+          </li>
+          <li>
+            <div class="text">Críticas</div>
+            <div class="button icon-film"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="separator"></div>
+      <div class="description extend">
+        <p>
+          As, Bistronomy cuenta con un tablero de platos del día, unos
+          precios asequibles y una invitación a un público familiar, que
+          podrá compartir, en su mayoría, platos de la cocina francesa y
+          estadounidense, así como algunas especialidades internacionales
+          que han ido cautivando a los Rausch en sus viajes.
+        </p>
+        <p>
+          Entre los platos clásicos franceses están el coq au vin
+          (medio pollo estofado en salsa de vino tinto con guarnición
+          de tocineta, champiñones y cebollitas, por 26.000 pesos) y
+          el cassoulet (cocido francés con fríjoles blancos, confit de pato,
+          salchicha Toulouse, cerdo y cordero, por 34.900 pesos).
+        </p>
+        <p>
+          Estas dos preparaciones conviven en la carta con el pollo frito,
+          las hamburguesas, un sándwiche de sobrebarriga con huevo frito
+          y las recetas de las abuelas Rausch. Lo mismo pasa con las
+          entradas y los postres, en los que los clásicos peach melba y
+          tiramisú se alternan con una sencilla paleta de agua.
+        </p>
+      </div>
+      <div class="separator"></div>
+      <div class="extra2"><a href="#">Editar carta/Sugerir modificación</a></div>
+      <div class="separator"></div>
+      <!--.invite Invitar-->
+    </div>
+    <div class="footer chat">
+      <div class="Input">
+        <div class="boxIcons">
+          <ul>
+            <li><span class="titleIcon">Happy</span><i class="icon-happy"></i></li>
+            <li><span class="titleIcon">Bubbles</span><i class="icon-bubbles"></i></li>
+            <li><span class="titleIcon">Image</span><i class="icon-image"></i></li>
+            <li><span class="titleIcon">Music</span><i class="icon-music"></i></li>
+            <li><span class="titleIcon">Gift</span><i class="icon-gift"></i></li>
+            <li><span class="titleIcon">Code</span><i class="icon-code"></i></li>
+            <li><span class="titleIcon">Like</span><i class="icon-thumbs-up"></i></li>
+            <li><span class="titleIcon">Mail</span><i class="icon-mail"></i></li>
+            <li><span class="titleIcon">Tag</span><i class="icon-tag"></i></li>
+            <li><span class="titleIcon">Share</span><i class="icon-share"></i></li>
+          </ul>
+        </div>
+        <div class="addIcons">+</div>
+        <div class="boxchat">
+          <input type="text">
+        </div>
       </div>
       <div class="Card">
-        <div class="btn blue js-invite">Invitar</div>
+        <div class="btn blue js-add">Agregar</div>
+      </div>
+      <div class="View">
+        <div class="btn js-view">Ver sugerencias</div>
       </div>
     </div>
-    <script>$(document).on('ready',home);</script>
+    <script>$(document).on('ready',chat);</script>
   </body>
 </html>

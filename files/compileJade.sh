@@ -1,1 +1,1 @@
-jade index.jade -w -o ../build/ -P
+jade {index,chat}.jade -w -o ../build/ -P
