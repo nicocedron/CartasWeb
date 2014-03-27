@@ -1,0 +1,44 @@
+extends template
+
+
+block content
+	.header.chat
+		.left
+			.back.icon-arrow-left
+		.right
+			.icon.icon-th-menu
+			.menu
+				.item 
+					a Descubre
+				.item
+					a Comparte
+				.item
+					a Colecciona
+				.separator
+
+				.item2
+					a Comentarios sobre la aplicacion
+				.item2
+					a Logout
+
+		.title
+			span Alitas y cerveza en
+			h2 The beer
+	.subheader.chat
+		div
+			input.search(placeholder="Buscar conversaciones de planes")
+
+		
+	+pageContent
+		+page
+			.newPlan
+				a(href="chat.html") Iniciar nuevo plan
+			ul.chat
+				include chatPage2
+
+	.footer.chat
+		.Ready(style="display:block")
+			.btn.js-add Listo
+
+	script
+		$(document).on('ready',chat);

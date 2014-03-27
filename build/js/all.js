@@ -153,18 +153,24 @@ function home(){
 
 	$('#comparteList .card .image').on('click',card.show);
 
+
+
+}
+$(document).on('ready',function(){
 	$('.header .right .icon').on('click',function(){
 		$('.header .right .menu').toggle();
 		$(this).toggleClass('active');
-	});
-
-}
-
+	});	
+});
 
 function chat(){
 
 		$('.footer > div').hide().eq(0).show();
 		$('.swiper-pages').css('top',90).css('bottom',50);
+
+		$('.Card .btn,.cards .share').on('click',function(){
+			location.href="agregar.html";
+		});
 
 		pages = $('.swiper-pages').swiper({
 		resistance:'100%',
@@ -178,13 +184,20 @@ function chat(){
 		onSlideChangeStart:function(slide){
 			var active=slide.activeIndex;
 			$('ul.nav li').removeClass('active').eq(active).addClass('active');
+			$('.page3').hide();
+			$('.swiper-pages').css('bottom','').css('top','');
 
 			if(active!=1){
 				$('.footer > div').hide().eq(active).show();
-				$('.swiper-pages').css('bottom',50);
+				$('.swiper-pages').css('bottom',50).css('top','');
+
+				if(active==2){
+					$('.page3').slideDown();
+					$('.swiper-pages').css('top',123);
+				}
+
 			}else{
 				$('.footer > div').hide();
-				$('.swiper-pages').css('bottom','0');
 				slide.reInit();
 			}
 
@@ -230,5 +243,14 @@ function chat(){
 
 	$('.header .back').on('click',function(){
 		location.href="index.html"
+	});
+
+	$('.cards .card .image').on('click',function(){
+		if(!card.open)
+			return;
+
+		$('.cardExpanded.chat').show();
+		$('.swiper-pages').css('bottom',50);
+		$('.footer .Card').show();
 	});
 }
