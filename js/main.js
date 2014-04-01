@@ -44,6 +44,13 @@ function ready(){
 
 function carta_expand(){
 
+	  if($(this).hasClass('is-card-selected')){
+
+	    $(this).removeClass('is-card-selected');
+
+	    return $('#template_expand').hide();
+	  }
+
 	if(template==null){
 		template='<div style="display:none" id="template_expand" class="wrapper-expanded">'+$('#template_expand').html()+'</div>';
 
@@ -71,6 +78,7 @@ function carta_expand(){
 	}
 	$('.wrapper').removeClass('is-card-selected');
 	$(this).addClass('is-card-selected');
+
 	insertar=(insertar*columnas);
 
 	if(insertar>=cartas)
@@ -264,7 +272,7 @@ var card={
 
 			card._window.off('scroll',card._efecto);
 			card._window.on('scroll',card._efecto);
-	
+
 	},
 
 	_efecto:function(){
@@ -281,7 +289,7 @@ var card={
 		}else if(card._windowHeight>card.blockHeight){
 			card.block.css({
 				'top':scroll
-			});					
+			});
 		}
 	}
 
