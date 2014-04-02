@@ -297,11 +297,23 @@ var card={
 
 }
 
+function widthNew(){
+	var widthElement = $('.fixed').width();
+	$('.divFijo').css('width',widthElement);
 
+}
+
+function algo(){
+	var newWidth = $('.fixedCard').width();
+	$('.fixedCard >.addCard').css('width',newWidth);
+
+}
 
 $(document).on('ready',popUp);
 $(document).on('ready',binds.card);
+$(window).on('ready resize',algo);
 $(window).on('load resize',height);
+$(window).on('load resize',widthNew);
 
 //Mask "Muy Pronto"
 function muyPronto(){
