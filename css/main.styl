@@ -29,8 +29,8 @@ h1,h2,h3,h4,h5,h6,p,ul,li
 
 /* Li seleccionado */
 .is-selected
-    background $B3
-    color #fff
+    background #E7E7E7
+    color #3F3F3F
     border-none
 
 .is-card-selected
@@ -1050,12 +1050,12 @@ section#content
                         font-weight 200
 
             h2
-                display block
-                background #fff
-                color #000
-                padding 5px 0
-                font-weight 200
-                text-align left
+                display: block;
+                background: #C5C5C5;
+                color: #414141;
+                padding: 10px;
+                font-weight: 400;
+                text-align: left;
 
             ul.content-chat
                 li
@@ -1074,7 +1074,7 @@ section#content
                             height 40px
 
                     .msj
-                        width 61%
+                        width 60%
                         text-align left
                         margin-left 5px
 
@@ -1082,14 +1082,21 @@ section#content
                             font-size 1.3em
                             font-weight 400
                             display block
+                            padding-top 9px
 
                         span:last-child
                             font-size 1.2em
                             font-weight 200
                             display block
 
-                    .hour
-                        padding 3px 4px
+                    .agregar
+                        padding: 6px;
+                        background: $B3;
+                        color: #FFF;
+                        width: 21%;
+                        margin-top: 8px;
+                        cursor pointer
+
 
                     &:last-child
                         border-bottom 0
@@ -1099,7 +1106,7 @@ section#content
                 text-decoration none
                 font-size 1.6em
                 padding 10px
-                color #000
+                color #fff
                 background $B1
                 display block
                 font-family $rale

@@ -44,6 +44,7 @@ function ready(){
 
 function carta_expand(){
 
+
 	  if($(this).hasClass('is-card-selected')){
 
 	    $(this).removeClass('is-card-selected');
@@ -51,6 +52,7 @@ function carta_expand(){
 	    return $('#template_expand').hide();
 	  }
 
+	
 	if(template==null){
 		template='<div style="display:none" id="template_expand" class="wrapper-expanded">'+$('#template_expand').html()+'</div>';
 
@@ -76,6 +78,9 @@ function carta_expand(){
 			break;
 
 	}
+	
+	
+
 	$('.wrapper').removeClass('is-card-selected');
 	$(this).addClass('is-card-selected');
 
@@ -86,6 +91,9 @@ function carta_expand(){
 	else
 		$('.wrapper').eq(insertar).before(template);
 
+	$('.box3 .agregar').on('click',function(){
+		$(this).parent('li').toggleClass('is-selected');
+	});
 
 	$('#template_expand').slideDown().find('.arrow').css('left',($(this).offset().left+$(this).width()/2)-20)
 	.end().find('.exit').on('click',function(e){
@@ -183,7 +191,6 @@ var scroll = {
 		$('.colSmall').css('overflow-y','');
 	}
 }
-
 
 
 var card={
@@ -303,9 +310,11 @@ function widthAddCard(){
 
 $(document).on('ready',popUp);
 $(document).on('ready',binds.card);
+
 $(window).on('load resize',height);
 $(window).on('load resize',widthNew);
 $(window).on('ready resize',widthAddCard);
+
 
 //Mask "Muy Pronto"
 function muyPronto(){
