@@ -7,7 +7,7 @@ function height(){
 }
 
 function popUp(){
-	$('#addFriends').on('click',binds.abrir);
+	$('.iniciar').on('click',binds.abrir);
 }
 
 
@@ -118,17 +118,9 @@ var binds = {
 						'<div class="headInvit">'+
 							'<h2>Invitados</h2>'+
 						'</div>'+
-						'<div class="listI">'+
-							'<a class="edit" href="#">Editar</a>'+
-							'<ul class="headList">'+
-								'<li>Maria</li>'+
-								'<li>Carlos</li>'+
-								'<li>Miguel</li>'+
-							'</ul>'+
-						'</div>'+
 					'</div>'+
 					'<div class="search">'+
-						'<input type="text" placeholder="Ingresa tu busqueda">'+
+						'<input type="text" placeholder="Buscar contactos">'+
 					'</div>'+
 					'<ul class="selectInvit">'+
 						'<li>'+
@@ -136,8 +128,8 @@ var binds = {
 								'<div class="box-img">'+
 									'<img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t5/s48x48/50497_286090116575_1262794_q.jpg"></img>'+
 								'</div>'+
-								'<span class="name">Juliana Lizarra</span>'+
-								'<input type="checkbox">'+
+								'<span class="name">Martin holman</span>'+
+								'<input type="checkbox" checked>'+
 							'</label>'+
 						'</li>'+
 						'<li>'+
@@ -155,7 +147,7 @@ var binds = {
 									'<img src="http://pbs.twimg.com/profile_images/1795303807/spinetta-784314_normal.jpg"></img>'+
 								'</div>'+
 								'<span class="name">Daniel Guerra</span>'+
-								'<input type="checkbox">'+
+								'<input type="checkbox" checked>'+
 							'</label>'+
 						'</li>'+
 						'<li>'+
@@ -303,7 +295,7 @@ function widthNew(){
 
 }
 
-function algo(){
+function widthAddCard(){
 	var newWidth = $('.fixedCard').width();
 	$('.fixedCard >.addCard').css('width',newWidth);
 
@@ -311,9 +303,9 @@ function algo(){
 
 $(document).on('ready',popUp);
 $(document).on('ready',binds.card);
-$(window).on('ready resize',algo);
 $(window).on('load resize',height);
 $(window).on('load resize',widthNew);
+$(window).on('ready resize',widthAddCard);
 
 //Mask "Muy Pronto"
 function muyPronto(){
