@@ -6,41 +6,31 @@ var SimulateTouch=true;
 
 var card={
 	open:true,
-	show:function(){
-
-		if(!card.open)
-			return;
-		$('.footer .Card .js-invite').off('click',card.invite);
-
-		$('.subheader,#comparteList').hide();
-		$('.swiper-pages').css('top','45px').css('bottom',50);
-		$('.cardExpanded').show();
-		$('.footer,.footer .Card .btn').show();
-
+	universal:function(){
 		$('.header .left .logo').hide();
 		$('.header .left .back').show()
 			.one('click',back)
 			.one('click',function(){
 
-				$('.subheader,#comparteList').show();
-				$('.swiper-pages').css('top','').css('bottom','');
-				$('.cardExpanded,.cardInvite,.footer,.footer .btn').hide();
-				$('.subheader').css('height','');
-				$('.subheader > div').css('display','none').eq(0).stop().fadeIn('slow');
-				resetPage(0);
+				history.back(1);
 			});
 
 		resetPage(0);
 
-		$('.footer .Card .js-invite').on('click',card.invite);
+	},
+	show:function(){
+
+		if(!card.open)
+			return;
+		
+		location.href="card.html"
 
 
 	},
 
 	invite:function(){
 
-		$('.cardExpanded').hide();
-		$('.cardInvite,.subheader').show();
+		$('.cardInvite,.subheader,.Invite').show();
 		$('.subheader').css('height',110);
 		$('.swiper-pages').css('top','155px');
 
@@ -67,7 +57,6 @@ var card={
 		});
 
 
-		$('.subheader > div').css('display','none').eq(3).stop().fadeIn('slow');
 
 		resetPage(0);
 
@@ -87,6 +76,10 @@ function back(){
 }
 
 function home(){
+
+	$('ul.chat li').on('click',function(){
+		location.href="chat.html"
+	});
 	
 	pages = $('.swiper-pages').swiper({
 		resistance:'100%',
@@ -101,11 +94,21 @@ function home(){
 			var active=slide.activeIndex;
 			$('ul.nav li').removeClass('active').eq(active).addClass('active');
 
-			$('.subheader > div:visible').stop().fadeOut('fast',function(){
+			$('.subheader > div:visible').stop().hide(0,function(){
 				$(this).removeClass('active');
-				$('.subheader > div').css('display','none').eq(active).stop().fadeIn('slow');
+				$('.subheader > div').css('display','none').eq(active).stop().show();
 			});
 
+			if(active==0) location.hash="descubre";
+			else if(active==1) location.hash="comparte";
+			else if(active==2) location.hash="colecciona";
+			
+
+		},
+		onFirstInit:function(){
+			setTimeout(function(){
+				$(location.hash).trigger('click');
+			},100);
 		}
 
 	});
@@ -116,6 +119,7 @@ function home(){
 		
 		PAGE[i]= $(this).swiper({
 			mode:'vertical',
+			resistance:'100%',
 			simulateTouch:SimulateTouch,
 			scrollContainer: true,
 			mousewheelControl: true,
@@ -139,7 +143,7 @@ function home(){
 
 	});
 
-	$('.filter span').on('click',function(){
+	$('.filter').on('click',function(){
 		$('.filter ul').stop().slideToggle('slow');
 	});
 
@@ -151,7 +155,15 @@ function home(){
 		resetPage(0);
 	});
 
-	$('#comparteList .card .image').on('click',card.show);
+	$('.card .image, .card .title,.card .tag,.card .address').on('click',card.show);
+	$('.card .share').on('click',to.invite);
+	
+	
+	$('.filterPage a').on('click',function(e){
+		e.preventDefault();
+		$('div.search.icon-filter').trigger('click');
+
+	});
 
 
 
@@ -160,7 +172,16 @@ $(document).on('ready',function(){
 	$('.header .right .icon').on('click',function(){
 		$('.header .right .menu').toggle();
 		$(this).toggleClass('active');
-	});	
+	});
+
+
+	$('.menu a').on('click',function(){
+		setTimeout(function(){
+			$(location.hash).trigger('click');
+			$('.header .right .menu').toggle();
+			$('.header .right .icon').removeClass('active');
+		},10);
+	});
 });
 
 function chat(){
@@ -194,6 +215,7 @@ function chat(){
 				if(active==2){
 					$('.page3').slideDown();
 					$('.swiper-pages').css('top',123);
+
 				}
 
 			}else{
@@ -230,6 +252,16 @@ function chat(){
 		});
 	});
 
+	$('.js-view').on('click',function(){
+		if($(this).data('text')==1)
+			$(this).html('Ver sugerencias').data('text',2);
+		else{
+			$(this).html('Agregar a favoritos').data('text',1);
+		}
+
+		resetPage(2);
+
+	});
 	$('.chatPages ul li').on('click',function(){
 		var index=$('.chatPages ul li').index(this);
 
@@ -241,8 +273,31 @@ function chat(){
 			$('.footer .boxIcons').slideToggle();
 	});
 
-	$('.header .back').on('click',function(){
-		location.href="index.html"
+	$('.header .back').on('click',to.back);
+
+	$('.box-carta').on('click',function(){
+		if(!card.open)
+			return;
+
+		pages.swipeTo(1);
+		$('.cardExpanded.chat').show().css('bottom',0);
+		$('.swiper-pages').css('bottom',0);
+
+		$('.header .back').off('click',to.back);
+		$('.header .back').one('click',function(e){
+			e.preventDefault();
+			$('.cardExpanded.chat').hide();
+			$('.swiper-pages').css('bottom','');
+			$('.cardExpanded.chat').css('bottom','');
+			$('.footer .Card').hide();
+			pages.swipeTo(0);
+			resetPage(0);
+			$('.header .back').on('click',to.back);
+
+			
+
+		});
+
 	});
 
 	$('.cards .card .image').on('click',function(){
@@ -252,5 +307,60 @@ function chat(){
 		$('.cardExpanded.chat').show();
 		$('.swiper-pages').css('bottom',50);
 		$('.footer .Card').show();
+		$('.footer > div:not(.Card)').hide();
+		$('.header .back').off('click',to.back);
+		$('.header .back').one('click',function(e){
+			e.preventDefault();
+			$('.cardExpanded.chat').hide();
+			$('.swiper-pages').css('bottom','');
+			$('.footer .Card').hide();
+			$('.header .back').on('click',to.back);			
+
+		});
+
 	});
+}
+
+
+
+
+
+
+
+
+
+//Extras
+
+var page={
+	card:function(){
+
+			$('.swiper-pages').css('top','45px').css('bottom',50);
+			$('.cardExpanded').show();
+			$('.footer,.footer .Card .btn').show().on('click',function(){
+				location.href="invite.html";
+			});
+			card.universal();
+			$('img').on('load',function(){
+				resetPage(0);
+			});
+
+	},
+	invite:function(){
+		card.universal();
+		$('.footer,.footer .Card .btn').show();
+		card.invite();
+		$('.swiper-pages').css('bottom',50);
+		resetPage(0);
+		
+	}
+}
+
+
+var to={
+	invite:function(){
+		location.href="invite.html"
+	},
+	back:function(){
+		history.back(1);
+	}
 }

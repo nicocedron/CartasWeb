@@ -2,11 +2,12 @@ extends template
 
 
 block content
-	.header.chat
+	.header
 		.left
 			.back.icon-arrow-left
 		.right
 			.icon.icon-th-menu
+
 			.menu
 				.item 
 					a(href="index.html#descubre") Descubre
@@ -21,24 +22,25 @@ block content
 				.item2
 					a Logout
 
-		.title
-			span Alitas y cerveza en
-			h2 The beer
-	.subheader.chat
-		div
-			input.search(placeholder="Buscar conversaciones de planes")
+		ul.nav
+			li#descubre Descubre
+			li#comparte Comparte
+			li#coleciona Colecciona
 
-		
+	
 	+pageContent
 		+page
-			.newPlan
-				a(href="chat.html") Iniciar nuevo plan
-			ul.chat
-				include chatPage2
+			.cardExpanded
+				include cardExpanded
+		
+	.footer
+		.Invite
+			.btn.js-search Buscar mas amigos
+			.btn.blue.js-invite Invitar
 
-	.footer.chat
-		.Ready(style="display:block")
-			.btn.js-add Listo
+		.Card
+			.btn.blue.js-invite Invitar
 
 	script
-		$(document).on('ready',chat);
+		$(document).on('ready',home);
+		$(document).on('ready',page.card);

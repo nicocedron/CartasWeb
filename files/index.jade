@@ -11,11 +11,11 @@ block content
 
 			.menu
 				.item 
-					a Descubre
+					a(href="index.html#descubre") Descubre
 				.item
-					a Comparte
+					a(href="index.html#comparte") Comparte
 				.item
-					a Colecciona
+					a(href="index.html#colecciona") Colecciona
 				.separator
 
 				.item2
@@ -26,12 +26,12 @@ block content
 		ul.nav
 			li#descubre.active Descubre
 			li#comparte Comparte
-			li#coleciona Colecciona
+			li#colecciona Colecciona
 
 	.subheader
 		.descubre.active
 			.filter 
-				span Filtros
+				span Ordena
 				ul
 					li Rating
 					li Distancia
@@ -46,20 +46,6 @@ block content
 		.colecciona
 			input.search(placeholder="Buscar cartas en tus colecciones")
 
-		.Invite
-			.subtitle
-				|Invitados
-
-			.floatR.right
-				.btn.green.js-edit Editar
-
-			.listInvite
-				ul.clearfix
-					li Juan Carlos B.
-					li Carlos Campos
-					li +1
-
-			input.search(placeholder="Buscar amigos para invitar")
 
 	+pageContent
 		+page
@@ -76,55 +62,32 @@ block content
 						.tag #{val.tag}
 						.address #{val.address}
 
-			.cardExpanded
-				include cardExpanded
 
-			.cardInvite
-				ul.selectInvit
-					li
-						label
-							.box-img
-								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t5/s48x48/50497_286090116575_1262794_q.jpg')
-							span.name Juliana Lizarra
-							input(type='checkbox')
-					li
-						label
-							.box-img
-								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/s48x48/1087018_160705070753108_939350680_q.jpg')
-							span.name Jeniffer Madison
-							input(type='checkbox')
-					li
-						label
-							.box-img
-								img(src='http://pbs.twimg.com/profile_images/1795303807/spinetta-784314_normal.jpg')
-							span.name Daniel Guerra
-							input(type='checkbox')
-					li
-						label
-							.box-img
-								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t5/s48x48/1086603_604037769674221_805703514_q.jpg')
-							span.name Bratt Pitt
-							input(type='checkbox')
-
-				
+			
 		+page
 			.newPlan
-				a(href="chat.html") Iniciar nuevo plan
+				a(href="invite.html") Iniciar nuevo plan
 			ul.chat
 				include chatPage
 
 
 		+page
-			.cards
-				each val in card
-					.card(class!="cat_#{val.category}")
-						.image(style!="background-image: url(#{val.image})")
-						.title #{val.title}
-							b En #{val.from}
-						.share Invitar
-						.tag #{val.tag}
-						.address #{val.address}
-		
+			.textNew
+				h3
+					“En este momento no has coleccionado planes. Para agregar planes a sección busca los que más te gusten en la sección Descubre”
+			.irA(onclick="pages.swipeTo(0)")
+				|Ve a descubre
+			//-
+				.cards
+					each val in card
+						.card(class!="cat_#{val.category}")
+							.image(style!="background-image: url(#{val.image})")
+							.title #{val.title}
+								b En #{val.from}
+							.share Invitar
+							.tag #{val.tag}
+							.address #{val.address}
+			
 	.footer
 		.Invite
 			.btn.js-search Buscar mas amigos

@@ -1,0 +1,85 @@
+extends template
+
+
+block content
+	.header
+		.left
+			.back.icon-arrow-left
+		.right
+			.icon.icon-th-menu
+
+			.menu
+				.item 
+					a(href="index.html#descubre") Descubre
+				.item
+					a(href="index.html#comparte") Comparte
+				.item
+					a(href="index.html#colecciona") Colecciona
+				.separator
+
+				.item2
+					a Comentarios sobre la aplicacion
+				.item2
+					a Logout
+
+		ul.nav
+			li#descubre Descubre
+			li#comparte Comparte
+			li#coleciona Colecciona
+
+	.subheader
+		.Invite
+			.subtitle
+				|Invitados
+
+			.floatR.right
+				.btn.green.js-edit Editar
+
+			.listInvite
+				ul.clearfix
+					li Juan Carlos B.
+					li Carlos Campos
+					li +1
+
+			input.search(placeholder="Buscar amigos para invitar")
+
+	+pageContent
+		+page
+			.cardInvite
+				ul.selectInvit
+					li
+						label
+							.box-img
+								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/t5/s48x48/50497_286090116575_1262794_q.jpg')
+							span.name Juliana Lizarra
+							input(type='checkbox')
+					li
+						label
+							.box-img
+								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/s48x48/1087018_160705070753108_939350680_q.jpg')
+							span.name Jeniffer Madison
+							input(type='checkbox')
+					li
+						label
+							.box-img
+								img(src='http://pbs.twimg.com/profile_images/1795303807/spinetta-784314_normal.jpg')
+							span.name Daniel Guerra
+							input(type='checkbox')
+					li
+						label
+							.box-img
+								img(src='https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t5/s48x48/1086603_604037769674221_805703514_q.jpg')
+							span.name Bratt Pitt
+							input(type='checkbox')
+		
+	.footer
+		.Invite
+			.btn.js-search Buscar mas amigos
+			.btn.blue.js-invite Invitar
+
+		.Card
+			.btn.blue.js-invite Invitar
+
+	script
+		$(document).on('ready',home);
+		$(document).on('ready',page.invite);
