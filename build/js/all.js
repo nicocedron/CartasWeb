@@ -31,15 +31,15 @@ var card={
 	invite:function(){
 
 		$('.cardInvite,.subheader,.Invite').show();
-		$('.subheader').css('height',110);
-		$('.swiper-pages').css('top','155px');
+		$('.subheader').css('height',80);
+		$('.swiper-pages').css('top','125px');
 
 		$('.footer .Card .btn').hide();
 		$('.footer .Invite .js-invite').show();
 
 		$('.subheader .Invite .js-edit').on('click',function(){
 			if($(this).hasClass('gray'))
-				return; 
+				return $('.js-search').trigger('click'); 
 
 			$(this).addClass('gray');
 			$('.swiper-pages').css('bottom',94);
@@ -156,7 +156,7 @@ function home(){
 	});
 
 	$('.card .image, .card .title,.card .tag,.card .address').on('click',card.show);
-	$('.card .share').on('click',to.invite);
+	$('.card .share').on('click',to.add);
 	
 	
 	$('.filterPage a').on('click',function(e){
@@ -238,6 +238,7 @@ function chat(){
 		PAGE[i]= $(this).swiper({
 			mode:'vertical',
 			simulateTouch:SimulateTouch,
+			resistance:'100%',
 			scrollContainer: true,
 			mousewheelControl: true,
 			onTouchMove:function(){
@@ -337,7 +338,7 @@ var page={
 			$('.swiper-pages').css('top','45px').css('bottom',50);
 			$('.cardExpanded').show();
 			$('.footer,.footer .Card .btn').show().on('click',function(){
-				location.href="invite.html";
+				location.href="agregar.html";
 			});
 			card.universal();
 			$('img').on('load',function(){
@@ -359,6 +360,9 @@ var page={
 var to={
 	invite:function(){
 		location.href="invite.html"
+	},
+	add:function(){
+		location.href="agregar.html"
 	},
 	back:function(){
 		history.back(1);
